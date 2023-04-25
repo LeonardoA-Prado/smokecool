@@ -1,23 +1,25 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #fffffffd;
-
+    background-color: #134e07fd;
 }
 
 header {
-
-    color: 	#000000;
-    background-color: #41ad20;
+    color: 	#cec9c9;
+    background-color: #000000ec;
     text-align: center;
+    
 }
 nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
     list-style: none;
+    text-decoration: none; 
 }
-  
-nav li {  
+   
+ul li a{
+    color: #6bb84c;
+    text-decoration: none;  
     margin-right: 10px;
-    
+
   }
