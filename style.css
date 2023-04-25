@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fffffffd;
+
+}
+
+header {
+
+    color: 	#000000;
+    background-color: #41ad20;
+    text-align: center;
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+  
+nav li {  
+    margin-right: 10px;
+    
+  }
