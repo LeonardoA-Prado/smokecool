@@ -1,1 +1,1 @@
-# smokecool
+# Smoke-Cool
