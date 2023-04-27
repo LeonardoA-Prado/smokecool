@@ -8,9 +8,8 @@ header {
     color: 	#cec9c9;
     background-color: #000000ec;
     text-align: center;
-    margin-top: -35px;
-    
 }
+
 nav ul {
     display: flex;
     justify-content: center;
@@ -21,9 +20,24 @@ nav ul {
    
 ul li a{
     
-    color: #6bb84c;
+    color: #84e416;
     text-decoration: none;  
     margin-right: 10px;
 
-  }
+}
+
+a:hover {
+    color:rgb(212, 140, 6);
+}
+
+h2 {
+    color: #ffffff;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+p {
+    color: rgb(255, 255, 255);
+    background-color: rgb(24, 22, 22);
+    padding: 5px;
+}
 
