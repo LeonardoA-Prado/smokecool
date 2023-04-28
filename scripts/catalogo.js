@@ -64,6 +64,8 @@ function CrearCatalogo(){
     const cantidadMangoContador = document.createElement("input")
     cantidadMangoContador.setAttribute("type","number")
 
+    //Tercera fila (Pistacho) Estoy en ello todavia
+
     //Implementar el indice
 
     indiceSabores.appendChild(saboresFotos);
