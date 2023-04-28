@@ -44,3 +44,27 @@ p {
     background-color: rgb(24, 22, 22);
     padding: 5px;
 }
+
+.tabla{
+    background-color:black ;
+    color:white;
+    border-collapse: separate;
+    border-spacing: 50px;
+}
+
+.fotoProductos{
+    height: 200px;
+    width: 200px;
+}
+
+.descripciones{
+    display: inline-block;
+}
+
+.PvP{
+   padding-bottom: 150px;
+}
+
+.cantidad{
+   padding-bottom: 150px;
+}
