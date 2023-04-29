@@ -37,7 +37,7 @@ function CrearCatalogo(){
     saboresBoton.textContent = "Comprar"
 
     const saboresPuntuación = document.createElement("th");
-    saboresPuntuación.textContent = "Puntuaciones";
+    saboresPuntuación.textContent = "Nota";
 
     //Segunda fila (Mango)
 
