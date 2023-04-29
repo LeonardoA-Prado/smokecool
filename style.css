@@ -114,3 +114,66 @@ p {
 }
 
 
+@media (max-width: 768px) {
+    header {
+      height: 50px;
+      padding: 0;
+    }
+  
+    nav li {
+      padding: 0 10px;
+    }
+  
+    ul li a {
+      margin-right: 5px;
+    }
+  
+    h2 {
+      font-size: 20px;
+    }
+  
+    p {
+      font-size: 14px;
+    }
+  
+    .tabla {
+      overflow-x: auto;
+      border-spacing: 5px;
+    }
+  
+    .fotoProductos {
+      height: 150px;
+      width: 150px;
+    }
+  
+    .descripciones,
+    .PvP,
+    .cantidad,
+    .botones,
+    .puntuaciones {
+      padding-bottom: 25px;
+    }
+  
+    .carritoFoto {
+      height: 25px;
+      width: 30px;
+    }
+
+    .fotoProductos{
+        height: 100px;
+        width: 100px;
+    }
+
+    th{
+        width: 30%;
+    }
+
+    td{
+        width: 30%;;
+    }
+
+    input[type = number]{
+        width: 50%;
+    }
+  }
+
