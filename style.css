@@ -45,6 +45,12 @@ p {
     padding: 5px;
 }
 
+.carritoFoto {
+ height: 35px;  
+ width: 40px; 
+ 
+}
+
 .grid-container {
     padding: 10px;
     display: grid;
