@@ -10,4 +10,5 @@ function saveData(event) {
     const data = {email, subject, message};
 
     localStorage.setItem('formData', JSON.stringify(data));
+    
 }

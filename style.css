@@ -91,7 +91,7 @@ p {
 .formulario input,
  .formulario textarea {
     resize: none;
-    width: 46%;
+    width: 99%;
     border: 1px solid #ffffff;
     background-color: transparent;
     color: #ffffff;
@@ -113,4 +113,10 @@ p {
     background-color: #000000;
 }
 
+.contactos { 
+    display: inline-flex;
+}
 
+.Direccion p{
+    background-color: transparent;
+}
