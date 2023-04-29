@@ -73,6 +73,10 @@ p {
     padding-bottom: 150px;
 }
 
+.puntuaciones{
+    padding-bottom: 150px;
+}
+
 .carritoLogoLink{
     display: inline-block;
 }
@@ -86,3 +90,4 @@ p {
 .buscador{
     display: inline-block;
 }
+
