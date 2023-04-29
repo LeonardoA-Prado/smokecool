@@ -58,7 +58,7 @@ p {
 }
 
 .descripciones{
-    display: inline-block;
+    padding-bottom: 105px;
 }
 
 .PvP{
@@ -67,4 +67,24 @@ p {
 
 .cantidad{
    padding-bottom: 150px;
+}
+
+.botones{
+    padding-bottom: 150px;
+}
+
+.carritoLogoLink{
+    display: inline-block;
+   padding-left: 10px;
+}
+
+.carritoFoto{
+    display: flex;
+    height: 20px;
+    width: 30px;
+}
+
+.buscador{
+    display: inline-block;
+    margin-bottom: 10px;
 }
