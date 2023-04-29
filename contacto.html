@@ -1,43 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-png" href="images/icon-formulario.png">
     <title>Contacto</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <header>
-    <a href="index.html"><img src="images/logo.png" width="50px" height="50px" href="index.html"></a>
-    <nav>
-        <ul>
-            <li><a href="index.html"> <b>Inicio</b> </a></li>
-            <li><a href="catalogo.html"> <b>Catálogo</b> </a></li>
-            <li><a href="contacto.html"> <b>Contacto</b> </a></li>
-            <li><a href="nosotros.html"> <b>Nosotros</b> </a></li>
-            <li><a class = "carritoLogoLink" href="index.html">
-                <img class ="carritoFoto" src="images/carrito.png" alt="">
-              </a></li>
-        </ul>
-    </nav>
-</header>
-    <div class="equipo"><p>Formulario de Contacto</p></div>
-     <form action="" class="formulario">
+    <header>
+        <a href="index.html"><img src="images/logo.png" width="50px" height="50px" href="index.html"></a>
+        <nav>
+            <ul>
+                <li><a href="index.html"> <b>Inicio</b> </a></li>
+                <li><a href="catalogo.html"> <b>Catálogo</b> </a></li>
+                <li><a href="contacto.html"> <b>Contacto</b> </a></li>
+                <li><a href="nosotros.html"> <b>Nosotros</b> </a></li>
+                <li><a class="carritoLogoLink" href="carrito.html">
+                        <img class="carritoFoto" src="images/carrito.png" alt="">
+                    </a></li>
+            </ul>
+        </nav>
+    </header>
+    
 
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" required><br>
+    <div class="contactos">
 
-        <label for="subject">Asunto</label>
-        <input type="text" name="subject" id="subject"><br>
+        <form action="" class="formulario">
+            <div>
+                <h2>Formulario de Contacto</h2>
+            </div>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required><br>
 
-        <label for="message">Mensaje</label>
-        <textarea name="message" id="message" cols="30" rows="10" required></textarea><br>
+            <label for="subject">Asunto</label>
+            <input type="text" name="subject" id="subject"><br>
 
-        <button type="submit" onsubmit="saveData(event)">Enviar</button>
-        
-     </form>
+            <label for="message">Mensaje</label>
+            <textarea name="message" id="message" cols="30" rows="10" required></textarea><br>
 
-     <script src="scripts/functions.js"></script>
+            <button type="submit" onsubmit="saveData(event)">Enviar</button>
+
+        </form>
+        <div class="Direccion">
+            <br><br>
+            <p><iframe
+                    src="https://www.google.com/maps/embed?pb=!3m2!1ses!2ses!4v1682780254455!5m2!1ses!2ses!6m8!1m7!1sZz_6C-RF60TMtU2LH7PN5w!2m2!1d36.51487771002903!2d-4.87511612448843!3f246.05!4f7.439999999999998!5f0.7820865974627469"
+                    width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+
+            <p> <b>Dirección:</b><br> C. Alfonso Palma, 23, Local 1, 29603 Marbella</p>
+            <p> <b>Telefono:</b> +34 640 640 133</p>
+        </div>
+
+
+    </div>
+
+    <script src="scripts/functions.js"></script>
+
+
 </body>
+
 </html>
