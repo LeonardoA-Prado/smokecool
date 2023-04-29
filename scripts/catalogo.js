@@ -112,7 +112,118 @@ function CrearCatalogo(){
     const botonPistacho = document.createElement("button");
     botonPistacho.textContent = "Añadir al carrito de la compra";
 
-    //Cuarta Fila (Clorofila) Estoy en ello
+    //Cuarta Fila (Clorofila) 
+
+    const saborClorofila = document.createElement("tr");
+    saborClorofila.classList.add("estiloProductos");
+
+    const saborClorofilaFoto = document.createElement("td");
+    const fotoClorofila = document.createElement("img");
+    fotoClorofila.classList.add("fotoProductos");
+    fotoClorofila.src = "images/smokain-intensify-menta-clorofila.jpg";
+
+    const saborClorofilaDescripción= document.createElement("td");
+    saborClorofilaDescripción.classList.add("descripciones");
+
+    const descripciónClorofila = document.createElement("p");
+    descripciónClorofila.textContent = "Sabor de Cachimba de Clorofila (250 g)";
+
+    const idClorofila= document.createElement("p");
+    idClorofila.textContent = "ID : E41";
+
+    const saborClorofilaPvP = document.createElement("td");
+    saborClorofilaPvP.classList.add("PvP");
+
+    const PvPClorofila = document.createElement("p");
+    PvPClorofila.textContent = "23€ ";
+
+    const saborClorofilaCantidad = document.createElement("td");
+    saborClorofilaCantidad.classList.add("cantidad");
+
+    const cantidadClorofilaContador = document.createElement("input");
+    cantidadClorofilaContador.setAttribute("type","number");
+
+    const saborClorofilaBoton = document.createElement("td");
+    saborClorofilaBoton.classList.add("botones")
+
+    const botonClorofila = document.createElement("button");
+    botonClorofila.textContent = "Añadir al carrito de la compra";
+
+    //Quinta Fila (Bacon)
+
+    const saborBacon = document.createElement("tr");
+    saborBacon.classList.add("estiloProductos");
+
+    const saborBaconFoto = document.createElement("td");
+
+    const fotoBacon = document.createElement("img");
+    fotoBacon.classList.add("fotoProductos");
+    fotoBacon.src = "images/BBQ-600-rhj7fn.jpg";
+
+    const saborBaconDescripción= document.createElement("td");
+    saborBaconDescripción.classList.add("descripciones");
+
+    const descripciónBacon = document.createElement("p");
+    descripciónBacon.textContent = "Sabor de Cachimba de Bacon (250 g)";
+
+    const idBacon= document.createElement("p");
+    idBacon.textContent = "ID : A81";
+
+    const saborBaconPvP = document.createElement("td");
+    saborBaconPvP.classList.add("PvP");
+
+    const PvPBacon = document.createElement("p");
+    PvPBacon.textContent = "12€ ";
+
+    const saborBaconCantidad = document.createElement("td");
+    saborBaconCantidad.classList.add("cantidad");
+
+    const cantidadBaconContador = document.createElement("input");
+    cantidadBaconContador.setAttribute("type","number");
+
+    const saborBaconBoton = document.createElement("td");
+    saborBaconBoton.classList.add("botones")
+
+    const botonBacon = document.createElement("button");
+    botonBacon.textContent = "Añadir al carrito de la compra";
+
+    //Sexta Fila (Marihuana)
+
+    const saborMarihuana = document.createElement("tr");
+    saborMarihuana.classList.add("estiloProductos");
+
+    const saborMarihuanaFoto = document.createElement("td");
+
+    const fotoMarihuana = document.createElement("img");
+    fotoMarihuana.classList.add("fotoProductos");
+    fotoMarihuana.src = "images/DSC_6087_grande.jpg";
+
+    const saborMarihuanaDescripción= document.createElement("td");
+    saborMarihuanaDescripción.classList.add("descripciones");
+
+    const descripciónMarihuana = document.createElement("p");
+    descripciónMarihuana.textContent = "Sabor de Cachimba de Marihuana (250 g)";
+
+    const idMarihuana= document.createElement("p");
+    idMarihuana.textContent = "ID : N98";
+
+    const saborMarihuanaPvP = document.createElement("td");
+    saborMarihuanaPvP.classList.add("PvP");
+
+    const PvPMarihuana = document.createElement("p");
+    PvPMarihuana.textContent = "5€ ";
+
+    const saborMarihuanaCantidad = document.createElement("td");
+    saborMarihuanaCantidad.classList.add("cantidad");
+
+    const cantidadMarihuanaContador = document.createElement("input");
+    cantidadMarihuanaContador.setAttribute("type","number");
+
+    const saborMarihuanaBoton = document.createElement("td");
+    saborMarihuanaBoton.classList.add("botones")
+
+    const botonMarihuana = document.createElement("button");
+    botonMarihuana.textContent = "Añadir al carrito de la compra";
 
     //Implementar el indice
 
@@ -152,11 +263,59 @@ function CrearCatalogo(){
     saborPistacho.appendChild(saborPistachoCantidad);
     saborPistacho.appendChild(saborPistachoBoton);
 
+    //Implementar Clorofila
+
+    saborClorofilaFoto.appendChild(fotoClorofila);
+    saborClorofilaDescripción.appendChild(descripciónClorofila);
+    saborClorofilaDescripción.appendChild(idClorofila)
+    saborClorofilaPvP.appendChild(PvPClorofila);
+    saborClorofilaCantidad.appendChild(cantidadClorofilaContador);
+    saborClorofilaBoton.appendChild(botonClorofila);
+
+    saborClorofila.appendChild(saborClorofilaFoto);
+    saborClorofila.appendChild(saborClorofilaDescripción);
+    saborClorofila.appendChild(saborClorofilaPvP);
+    saborClorofila.appendChild(saborClorofilaCantidad);
+    saborClorofila.appendChild(saborClorofilaBoton);
+
+    //Implementar Bacon
+
+    saborBaconFoto.appendChild(fotoBacon);
+    saborBaconDescripción.appendChild(descripciónBacon);
+    saborBaconDescripción.appendChild(idBacon)
+    saborBaconPvP.appendChild(PvPBacon);
+    saborBaconCantidad.appendChild(cantidadBaconContador);
+    saborBaconBoton.appendChild(botonBacon);
+
+    saborBacon.appendChild(saborBaconFoto);
+    saborBacon.appendChild(saborBaconDescripción);
+    saborBacon.appendChild(saborBaconPvP);
+    saborBacon.appendChild(saborBaconCantidad);
+    saborBacon.appendChild(saborBaconBoton);
+
+    //Impletar Marihuana
+
+    saborMarihuanaFoto.appendChild(fotoMarihuana);
+    saborMarihuanaDescripción.appendChild(descripciónMarihuana);
+    saborMarihuanaDescripción.appendChild(idMarihuana)
+    saborMarihuanaPvP.appendChild(PvPMarihuana);
+    saborMarihuanaCantidad.appendChild(cantidadMarihuanaContador);
+    saborMarihuanaBoton.appendChild(botonMarihuana);
+
+    saborMarihuana.appendChild(saborMarihuanaFoto);
+    saborMarihuana.appendChild(saborMarihuanaDescripción);
+    saborMarihuana.appendChild(saborMarihuanaPvP);
+    saborMarihuana.appendChild(saborMarihuanaCantidad);
+    saborMarihuana.appendChild(saborMarihuanaBoton);
+
     //Implementar filasSabores
 
     tablaSabores.appendChild(indiceSabores);
     tablaSabores.appendChild(saborMango);
     tablaSabores.appendChild(saborPistacho);
+    tablaSabores.appendChild(saborClorofila);
+    tablaSabores.appendChild(saborBacon)
+    tablaSabores.appendChild(saborMarihuana)
 
     //Implementar tablas
 
