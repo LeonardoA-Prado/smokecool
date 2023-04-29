@@ -71,4 +71,37 @@ p {
 
 }
 
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    margin-top: 20px;
+    padding: 10px;
+    color: #ffffff;
+    font-weight: bold;
+
+}
+
+.formulario input,
+ .formulario textarea {
+    resize: none;
+    width: 46%;
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    color: #ffffff;
+}
+
+.formulario button {
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    font-weight: bold;
+    color: #ffffff;
+    width: 150px;
+    height: 50px;
+}
+
+.formulario button:hover {
+    background-color: #000000;
+}
+
 
