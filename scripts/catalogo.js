@@ -9,14 +9,6 @@ function CrearCatalogo(){
     const contenedorTablas = document.createElement("div");
     contenedorTablas.classList.add("contenedorTabla");
 
-    //Link Carrito de compra
-    const carritoLink = document.createElement("a");
-    carritoLink.classList.add("carritoLogoLink")
-   
-    const carritoLinkFoto = document.createElement("img");
-    carritoLinkFoto.classList.add("carritoFoto")
-    carritoLinkFoto.src = "images/107831.png";
-
     //Titulo para el catalogo de sabores de cachimbas
     const nombreSabores = document.createElement("p");
     nombreSabores.textContent = 'Sabores de cachimba';
@@ -119,10 +111,6 @@ function CrearCatalogo(){
 
     const botonPistacho = document.createElement("button");
     botonPistacho.textContent = "Añadir al carrito de la compra";
-
-    //Implementar Carrito Logo
-
-    carritoLink.appendChild(carritoLinkFoto);
 
     //Implementar el indice
 
