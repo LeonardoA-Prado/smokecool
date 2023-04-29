@@ -43,7 +43,7 @@ function CrearCatalogo() {
 
     const saboresPuntuación = document.createElement("th");
     saboresPuntuación.classList.add("productos");
-    saboresPuntuación.textContent = "Puntuaciones";
+    saboresPuntuación.textContent = "Nota";
 
     //Segunda fila (Mango)
 
@@ -434,7 +434,7 @@ function CrearCatalogo() {
 
     const licoresPuntuación = document.createElement("th");
     licoresPuntuación.classList.add("productos");
-    licoresPuntuación.textContent = "Puntuaciones";
+    licoresPuntuación.textContent = "Nota";
 
     //Licor Maracuya
     const maracuya = document.createElement("tr");
@@ -451,7 +451,7 @@ function CrearCatalogo() {
 
     const descripciónMaracuya = document.createElement("p");
     descripciónMaracuya.classList.add("descripcion");
-    descripciónMaracuya.textContent = "Licor de mango brasileño (50 cl)";
+    descripciónMaracuya.textContent = "Licor de Maracuya (50 cl)";
 
     const idMaracuya = document.createElement("p");
     idMaracuya.classList.add("id");
@@ -500,7 +500,7 @@ function CrearCatalogo() {
 
     const descripciónMandarina = document.createElement("p");
     descripciónMandarina.classList.add("descripcion");
-    descripciónMandarina.textContent = "Licor de mandarina(50 cl)";
+    descripciónMandarina.textContent = "Licor de Mandarina(50 cl)";
 
     const idMandarina = document.createElement("p");
     idMandarina.classList.add("id");
@@ -549,7 +549,7 @@ function CrearCatalogo() {
 
     const descripciónManzana = document.createElement("p");
     descripciónManzana.classList.add("descripcion");
-    descripciónManzana.textContent = "Licor de manzana(50 cl)";
+    descripciónManzana.textContent = "Licor de Manzana (50 cl)";
 
     const idManzana = document.createElement("p");
     idManzana.classList.add("id");
@@ -598,7 +598,7 @@ function CrearCatalogo() {
 
     const descripciónCoco = document.createElement("p");
     descripciónCoco.classList.add("descripcion");
-    descripciónCoco.textContent = "Licor de coco de São Paulo(50 cl)";
+    descripciónCoco.textContent = "Licor de Coco de São Paulo (Stock Limit) (50 cl)";
 
     const idCoco = document.createElement("p");
     idCoco.classList.add("id");
@@ -647,7 +647,7 @@ function CrearCatalogo() {
 
     const descripciónPepi = document.createElement("p");
     descripciónPepi.classList.add("descripcion");
-    descripciónPepi.textContent = "Licor de pepinillo(50 cl)";
+    descripciónPepi.textContent = "Licor de Pepinillo (50 cl)";
 
     const idPepi = document.createElement("p");
     idPepi.classList.add("id");
@@ -718,7 +718,7 @@ function CrearCatalogo() {
     mandarina.appendChild(mandarinaFoto);
     mandarina.appendChild(licorMandarinaDescripción);
     mandarina.appendChild(licorMandarinaPvP);
-    mandarina.appendChild(cantidadMandarinaContador);
+    mandarina.appendChild(licorMandarinaCantidad);
     mandarina.appendChild(licorMandarinaBoton);
     mandarina.appendChild(licorMandarinaPuntuación);
 
@@ -734,7 +734,7 @@ function CrearCatalogo() {
     manzana.appendChild(manzanaFoto);
     manzana.appendChild(licorManzanaDescripción);
     manzana.appendChild(licorManzanaPvP);
-    manzana.appendChild(cantidadManzanaContador);
+    manzana.appendChild(licorManzanaCantidad);
     manzana.appendChild(licorManzanaBoton);
     manzana.appendChild(licorManzanaPuntuación);
 
@@ -750,7 +750,7 @@ function CrearCatalogo() {
     coco.appendChild(cocoFoto);
     coco.appendChild(licorCocoDescripción);
     coco.appendChild(licorCocoPvP);
-    coco.appendChild(cantidadCocoContador);
+    coco.appendChild(licorCocoCantidad);
     coco.appendChild(licorCocoBoton);
     coco.appendChild(licorCocoPuntuación);
 
