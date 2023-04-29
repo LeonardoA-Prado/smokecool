@@ -37,6 +37,7 @@ function CrearCatalogo(){
     saboresBoton.textContent = "Comprar"
 
     //Segunda fila (Mango)
+    
     const saborMango = document.createElement("tr");
     saborMango.classList.add("estiloProductos");
 
@@ -72,7 +73,6 @@ function CrearCatalogo(){
 
     const botonMango = document.createElement("button");
     botonMango.textContent = "Añadir al carrito de la compra";
-
 
     //Tercera fila (Pistacho) 
 
@@ -112,6 +112,8 @@ function CrearCatalogo(){
     const botonPistacho = document.createElement("button");
     botonPistacho.textContent = "Añadir al carrito de la compra";
 
+    //Cuarta Fila (Clorofila) Estoy en ello
+
     //Implementar el indice
 
     indiceSabores.appendChild(saboresFotos);
@@ -135,20 +137,20 @@ function CrearCatalogo(){
     saborMango.appendChild(saborMangoCantidad);
     saborMango.appendChild(saborMangoBoton);
 
-     //Implementar Pistacho
+    //Implementar Pistacho
 
-     saborPistachoFoto.appendChild(fotoPistacho);
-     saborPistachoDescripción.appendChild(descripciónPistacho);
-     saborPistachoDescripción.appendChild(idPistacho)
-     saborPistachoPvP.appendChild(PvPPistacho);
-     saborPistachoCantidad.appendChild(cantidadPistachoContador);
-     saborPistachoBoton.appendChild(botonPistacho);
+    saborPistachoFoto.appendChild(fotoPistacho);
+    saborPistachoDescripción.appendChild(descripciónPistacho);
+    saborPistachoDescripción.appendChild(idPistacho)
+    saborPistachoPvP.appendChild(PvPPistacho);
+    saborPistachoCantidad.appendChild(cantidadPistachoContador);
+    saborPistachoBoton.appendChild(botonPistacho);
  
-     saborPistacho.appendChild(saborPistachoFoto);
-     saborPistacho.appendChild(saborPistachoDescripción);
-     saborPistacho.appendChild(saborPistachoPvP);
-     saborPistacho.appendChild(saborPistachoCantidad);
-     saborPistacho.appendChild(saborPistachoBoton);
+    saborPistacho.appendChild(saborPistachoFoto);
+    saborPistacho.appendChild(saborPistachoDescripción);
+    saborPistacho.appendChild(saborPistachoPvP);
+    saborPistacho.appendChild(saborPistachoCantidad);
+    saborPistacho.appendChild(saborPistachoBoton);
 
     //Implementar filasSabores
 
@@ -158,7 +160,6 @@ function CrearCatalogo(){
 
     //Implementar tablas
 
-   
     contenedorTablas.appendChild(nombreSabores);
     contenedorTablas.appendChild(tablaSabores)
     catalogoContainer.appendChild(contenedorTablas);
