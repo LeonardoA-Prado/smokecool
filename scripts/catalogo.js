@@ -37,7 +37,7 @@ function CrearCatalogo(){
     saboresBoton.textContent = "Comprar"
 
     //Segunda fila (Mango)
-    
+
     const saborMango = document.createElement("tr");
     saborMango.classList.add("estiloProductos");
 
