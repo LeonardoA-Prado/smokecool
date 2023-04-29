@@ -17,7 +17,7 @@ function CrearCatalogo(){
     const tablaSabores = document.createElement("table");
     tablaSabores.classList.add("tabla");
 
-    //Primera fila (Indice)
+    //Primera fila (Indice sabores)
     const indiceSabores = document.createElement("tr")
     indiceSabores.classList.add("indices");
 
@@ -225,7 +225,7 @@ function CrearCatalogo(){
     const botonMarihuana = document.createElement("button");
     botonMarihuana.textContent = "Añadir al carrito de la compra";
 
-    //Implementar el indice
+    //Implementar el indice sabores
 
     indiceSabores.appendChild(saboresFotos);
     indiceSabores.appendChild(saboresDescripción);
@@ -317,10 +317,52 @@ function CrearCatalogo(){
     tablaSabores.appendChild(saborBacon)
     tablaSabores.appendChild(saborMarihuana)
 
+    //Titulo para el catalogo de sabores de licores
+    const nombreLicores = document.createElement("p");
+    nombreLicores.textContent = 'Sabores de Licores';
+
+    //Tabla de cachimbas
+    const tablaLicores = document.createElement("table");
+    tablaLicores.classList.add("tabla");
+
+    //Primer fila (indice Licores)
+
+    const indiceLicores = document.createElement("tr")
+    indiceLicores.classList.add("indices");
+
+    const licoresFotos = document.createElement("th");
+    licoresFotos.textContent = "Productos";
+
+    const licoresDescripción= document.createElement("th");
+    licoresDescripción.textContent = "Descripción";
+
+    const licoresPvP = document.createElement("th");
+    licoresPvP.textContent = "Precio por unidad";
+
+    const licoresCantidad = document.createElement("th");
+    licoresCantidad.textContent = "Cantidad";
+
+    const licoresBoton = document.createElement("th");
+    licoresBoton.textContent = "Comprar"
+
+    //Implementar indice licores
+
+    indiceLicores.appendChild(licoresFotos);
+    indiceLicores.appendChild(licoresDescripción);
+    indiceLicores.appendChild(licoresPvP);
+    indiceLicores.appendChild(licoresCantidad);
+    indiceLicores.appendChild(licoresBoton)
+
+    //Implementar filas Licores
+
+    tablaLicores.appendChild(indiceLicores)
+
     //Implementar tablas
 
     contenedorTablas.appendChild(nombreSabores);
     contenedorTablas.appendChild(tablaSabores)
+    contenedorTablas.appendChild(nombreLicores)
+    contenedorTablas.appendChild(tablaLicores);
     catalogoContainer.appendChild(contenedorTablas);
 }
 
