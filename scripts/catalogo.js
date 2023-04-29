@@ -36,6 +36,9 @@ function CrearCatalogo(){
     const saboresBoton = document.createElement("th");
     saboresBoton.textContent = "Comprar"
 
+    const saboresPuntuación = document.createElement("th");
+    saboresPuntuación.textContent = "Puntuaciones";
+
     //Segunda fila (Mango)
 
     const saborMango = document.createElement("tr");
@@ -73,6 +76,12 @@ function CrearCatalogo(){
 
     const botonMango = document.createElement("button");
     botonMango.textContent = "Añadir al carrito de la compra";
+
+    const saborMangoPuntuación = document.createElement("td");
+    saborMangoPuntuación.classList.add("puntuaciones");
+
+    const puntuaciónMango = document.createElement("p");
+    puntuaciónMango.textContent = "10 / 10"
 
     //Tercera fila (Pistacho) 
 
@@ -112,6 +121,12 @@ function CrearCatalogo(){
     const botonPistacho = document.createElement("button");
     botonPistacho.textContent = "Añadir al carrito de la compra";
 
+    const saborPistachoPuntuación = document.createElement("td");
+    saborPistachoPuntuación.classList.add("puntuaciones");
+
+    const puntuaciónPistacho = document.createElement("p");
+    puntuaciónPistacho.textContent = "8 / 10"
+
     //Cuarta Fila (Clorofila) 
 
     const saborClorofila = document.createElement("tr");
@@ -148,6 +163,12 @@ function CrearCatalogo(){
 
     const botonClorofila = document.createElement("button");
     botonClorofila.textContent = "Añadir al carrito de la compra";
+
+    const saborClorofilaPuntuación = document.createElement("td");
+    saborClorofilaPuntuación.classList.add("puntuaciones");
+
+    const puntuaciónClorofila = document.createElement("p");
+    puntuaciónClorofila.textContent = "9.5 / 10"
 
     //Quinta Fila (Bacon)
 
@@ -187,6 +208,12 @@ function CrearCatalogo(){
     const botonBacon = document.createElement("button");
     botonBacon.textContent = "Añadir al carrito de la compra";
 
+    const saborBaconPuntuación = document.createElement("td");
+    saborBaconPuntuación.classList.add("puntuaciones");
+
+    const puntuaciónBacon = document.createElement("p");
+    puntuaciónBacon.textContent = "8.25 / 10"
+
     //Sexta Fila (Marihuana)
 
     const saborMarihuana = document.createElement("tr");
@@ -225,97 +252,11 @@ function CrearCatalogo(){
     const botonMarihuana = document.createElement("button");
     botonMarihuana.textContent = "Añadir al carrito de la compra";
 
-    //Implementar el indice sabores
+    const saborMarihuanaPuntuación = document.createElement("td");
+    saborMarihuanaPuntuación.classList.add("puntuaciones");
 
-    indiceSabores.appendChild(saboresFotos);
-    indiceSabores.appendChild(saboresDescripción);
-    indiceSabores.appendChild(saboresPvP);
-    indiceSabores.appendChild(saboresCantidad);
-    indiceSabores.appendChild(saboresBoton)
-
-    //Implementar Mango
-
-    saborMangoFoto.appendChild(fotoMango);
-    saborMangoDescripción.appendChild(descripciónMango);
-    saborMangoDescripción.appendChild(idMango)
-    saborMangoPvP.appendChild(PvPMango);
-    saborMangoCantidad.appendChild(cantidadMangoContador);
-    saborMangoBoton.appendChild(botonMango);
-
-    saborMango.appendChild(saborMangoFoto);
-    saborMango.appendChild(saborMangoDescripción);
-    saborMango.appendChild(saborMangoPvP);
-    saborMango.appendChild(saborMangoCantidad);
-    saborMango.appendChild(saborMangoBoton);
-
-    //Implementar Pistacho
-
-    saborPistachoFoto.appendChild(fotoPistacho);
-    saborPistachoDescripción.appendChild(descripciónPistacho);
-    saborPistachoDescripción.appendChild(idPistacho)
-    saborPistachoPvP.appendChild(PvPPistacho);
-    saborPistachoCantidad.appendChild(cantidadPistachoContador);
-    saborPistachoBoton.appendChild(botonPistacho);
- 
-    saborPistacho.appendChild(saborPistachoFoto);
-    saborPistacho.appendChild(saborPistachoDescripción);
-    saborPistacho.appendChild(saborPistachoPvP);
-    saborPistacho.appendChild(saborPistachoCantidad);
-    saborPistacho.appendChild(saborPistachoBoton);
-
-    //Implementar Clorofila
-
-    saborClorofilaFoto.appendChild(fotoClorofila);
-    saborClorofilaDescripción.appendChild(descripciónClorofila);
-    saborClorofilaDescripción.appendChild(idClorofila)
-    saborClorofilaPvP.appendChild(PvPClorofila);
-    saborClorofilaCantidad.appendChild(cantidadClorofilaContador);
-    saborClorofilaBoton.appendChild(botonClorofila);
-
-    saborClorofila.appendChild(saborClorofilaFoto);
-    saborClorofila.appendChild(saborClorofilaDescripción);
-    saborClorofila.appendChild(saborClorofilaPvP);
-    saborClorofila.appendChild(saborClorofilaCantidad);
-    saborClorofila.appendChild(saborClorofilaBoton);
-
-    //Implementar Bacon
-
-    saborBaconFoto.appendChild(fotoBacon);
-    saborBaconDescripción.appendChild(descripciónBacon);
-    saborBaconDescripción.appendChild(idBacon)
-    saborBaconPvP.appendChild(PvPBacon);
-    saborBaconCantidad.appendChild(cantidadBaconContador);
-    saborBaconBoton.appendChild(botonBacon);
-
-    saborBacon.appendChild(saborBaconFoto);
-    saborBacon.appendChild(saborBaconDescripción);
-    saborBacon.appendChild(saborBaconPvP);
-    saborBacon.appendChild(saborBaconCantidad);
-    saborBacon.appendChild(saborBaconBoton);
-
-    //Impletar Marihuana
-
-    saborMarihuanaFoto.appendChild(fotoMarihuana);
-    saborMarihuanaDescripción.appendChild(descripciónMarihuana);
-    saborMarihuanaDescripción.appendChild(idMarihuana)
-    saborMarihuanaPvP.appendChild(PvPMarihuana);
-    saborMarihuanaCantidad.appendChild(cantidadMarihuanaContador);
-    saborMarihuanaBoton.appendChild(botonMarihuana);
-
-    saborMarihuana.appendChild(saborMarihuanaFoto);
-    saborMarihuana.appendChild(saborMarihuanaDescripción);
-    saborMarihuana.appendChild(saborMarihuanaPvP);
-    saborMarihuana.appendChild(saborMarihuanaCantidad);
-    saborMarihuana.appendChild(saborMarihuanaBoton);
-
-    //Implementar filasSabores
-
-    tablaSabores.appendChild(indiceSabores);
-    tablaSabores.appendChild(saborMango);
-    tablaSabores.appendChild(saborPistacho);
-    tablaSabores.appendChild(saborClorofila);
-    tablaSabores.appendChild(saborBacon)
-    tablaSabores.appendChild(saborMarihuana)
+    const puntuaciónMarihuana = document.createElement("p");
+    puntuaciónMarihuana.textContent = "10 / 10"
 
     //Titulo para el catalogo de sabores de licores
     const nombreLicores = document.createElement("p");
@@ -344,6 +285,109 @@ function CrearCatalogo(){
 
     const licoresBoton = document.createElement("th");
     licoresBoton.textContent = "Comprar"
+
+    //Implementar el indice sabores
+
+    indiceSabores.appendChild(saboresFotos);
+    indiceSabores.appendChild(saboresDescripción);
+    indiceSabores.appendChild(saboresPvP);
+    indiceSabores.appendChild(saboresCantidad);
+    indiceSabores.appendChild(saboresBoton);
+    indiceSabores.appendChild(saboresPuntuación);
+
+    //Implementar Mango
+
+    saborMangoFoto.appendChild(fotoMango);
+    saborMangoDescripción.appendChild(descripciónMango);
+    saborMangoDescripción.appendChild(idMango)
+    saborMangoPvP.appendChild(PvPMango);
+    saborMangoCantidad.appendChild(cantidadMangoContador);
+    saborMangoBoton.appendChild(botonMango);
+    saborMangoPuntuación.appendChild(puntuaciónMango);
+
+    saborMango.appendChild(saborMangoFoto);
+    saborMango.appendChild(saborMangoDescripción);
+    saborMango.appendChild(saborMangoPvP);
+    saborMango.appendChild(saborMangoCantidad);
+    saborMango.appendChild(saborMangoBoton);
+    saborMango.appendChild(saborMangoPuntuación);
+
+    //Implementar Pistacho
+
+    saborPistachoFoto.appendChild(fotoPistacho);
+    saborPistachoDescripción.appendChild(descripciónPistacho);
+    saborPistachoDescripción.appendChild(idPistacho)
+    saborPistachoPvP.appendChild(PvPPistacho);
+    saborPistachoCantidad.appendChild(cantidadPistachoContador);
+    saborPistachoBoton.appendChild(botonPistacho);
+    saborPistachoPuntuación.appendChild(puntuaciónPistacho)
+ 
+    saborPistacho.appendChild(saborPistachoFoto);
+    saborPistacho.appendChild(saborPistachoDescripción);
+    saborPistacho.appendChild(saborPistachoPvP);
+    saborPistacho.appendChild(saborPistachoCantidad);
+    saborPistacho.appendChild(saborPistachoBoton);
+    saborPistacho.appendChild(saborPistachoPuntuación)
+
+    //Implementar Clorofila
+
+    saborClorofilaFoto.appendChild(fotoClorofila);
+    saborClorofilaDescripción.appendChild(descripciónClorofila);
+    saborClorofilaDescripción.appendChild(idClorofila)
+    saborClorofilaPvP.appendChild(PvPClorofila);
+    saborClorofilaCantidad.appendChild(cantidadClorofilaContador);
+    saborClorofilaBoton.appendChild(botonClorofila);
+    saborClorofilaPuntuación.appendChild(puntuaciónClorofila);
+
+    saborClorofila.appendChild(saborClorofilaFoto);
+    saborClorofila.appendChild(saborClorofilaDescripción);
+    saborClorofila.appendChild(saborClorofilaPvP);
+    saborClorofila.appendChild(saborClorofilaCantidad);
+    saborClorofila.appendChild(saborClorofilaBoton);
+    saborClorofila.appendChild(saborClorofilaPuntuación);
+
+    //Implementar Bacon
+
+    saborBaconFoto.appendChild(fotoBacon);
+    saborBaconDescripción.appendChild(descripciónBacon);
+    saborBaconDescripción.appendChild(idBacon)
+    saborBaconPvP.appendChild(PvPBacon);
+    saborBaconCantidad.appendChild(cantidadBaconContador);
+    saborBaconBoton.appendChild(botonBacon);
+    saborBaconPuntuación.appendChild(puntuaciónBacon)
+
+    saborBacon.appendChild(saborBaconFoto);
+    saborBacon.appendChild(saborBaconDescripción);
+    saborBacon.appendChild(saborBaconPvP);
+    saborBacon.appendChild(saborBaconCantidad);
+    saborBacon.appendChild(saborBaconBoton);
+    saborBacon.appendChild(saborBaconPuntuación)
+
+    //Impletar Marihuana
+
+    saborMarihuanaFoto.appendChild(fotoMarihuana);
+    saborMarihuanaDescripción.appendChild(descripciónMarihuana);
+    saborMarihuanaDescripción.appendChild(idMarihuana)
+    saborMarihuanaPvP.appendChild(PvPMarihuana);
+    saborMarihuanaCantidad.appendChild(cantidadMarihuanaContador);
+    saborMarihuanaBoton.appendChild(botonMarihuana);
+    saborMarihuanaPuntuación.appendChild(puntuaciónMarihuana);
+
+    saborMarihuana.appendChild(saborMarihuanaFoto);
+    saborMarihuana.appendChild(saborMarihuanaDescripción);
+    saborMarihuana.appendChild(saborMarihuanaPvP);
+    saborMarihuana.appendChild(saborMarihuanaCantidad);
+    saborMarihuana.appendChild(saborMarihuanaBoton);
+    saborMarihuana.appendChild(saborMarihuanaPuntuación);
+
+    //Implementar filasSabores
+
+    tablaSabores.appendChild(indiceSabores);
+    tablaSabores.appendChild(saborMango);
+    tablaSabores.appendChild(saborPistacho);
+    tablaSabores.appendChild(saborClorofila);
+    tablaSabores.appendChild(saborBacon)
+    tablaSabores.appendChild(saborMarihuana)
 
     //Implementar indice licores
 
