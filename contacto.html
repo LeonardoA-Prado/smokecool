@@ -26,7 +26,7 @@
         </nav>
     </header>
     
-    <button class="admin">Iniciar Sesion</button>
+    <button class="admin" id="admin">Iniciar Sesion</button>
     <div class="contactos">
 
         <form action="" class="formulario">
@@ -56,6 +56,19 @@
             <p> <b>Telefono:</b> +34 640 640 133</p>
         </div>
 
+        <div class="ventana" id="ventana">
+            <div class="popup" id="popup">
+                <a href="" id="cerrar-ventana" class="cerrar-ventana"><img src="/images/icon-cerrar-ventana.png" ></a>
+                <h3>Iniciar Sesion</h3>
+                <h4>Solo Administradores</h4>
+                <form action="">
+                    <div class="entrada">
+                        <input type="password" id="password" placeholder="Contraseña" required>
+                    </div>
+                    <input type="submit" id="submit" value="Acceder"  class="submit">
+                </form>
+            </div>
+        </div>
 
     </div>
 

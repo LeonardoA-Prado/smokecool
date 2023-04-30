@@ -12,3 +12,22 @@ function saveData(event) {
     localStorage.setItem('formData', JSON.stringify(data));
     
 }
+
+var abrirVentana = document.getElementById('admin'), 
+    ventana = document.getElementById('ventana'),
+    popup = document.getElementById('popup'),
+    cerrarVentana = document.getElementById('cerrar-ventana');
+
+abrirVentana.addEventListener('click',openWindow);
+cerrarVentana.addEventListener('click', closeWindow);
+
+function openWindow(accion){
+    ventana.classList.add('active');
+    popup.classList.add('active');
+}
+
+function closeWindow(accion){
+    ventana.classList.remove('active');
+    popup.classList.remove('active');
+}
+
