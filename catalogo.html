@@ -12,8 +12,9 @@
 
 <body>
   <header>
-<<<<<<< HEAD
-    <a href="index.html"><img src="images/logo.png" width="50px" height="50px"></a>
+    <a href="index.html"><img onmouseout="this.src='images/logoblanco.png'" src="images/logoblanco.png" width="50px"
+        height="50px" href="index.html" onmouseover="this.src='images/logonaranja.png'" src="images/logonaranja.png"
+        width="50px" height="50px"></a>
     <nav>
       <ul>
         <li><a href="index.html"> <b>Inicio</b> </a></li>
@@ -21,12 +22,13 @@
         <li><a href="contacto.html"> <b>Contacto</b> </a></li>
         <li><a href="nosotros.html"> <b>Nosotros</b> </a></li>
         <li><a class="carritoLogoLink" href="carrito.html">
-            <img class="carritoFoto" src="images/carrito.png" alt="">
+            <img class="carritoFoto" onmouseout="this.src='images/carrito.png'" src="images/carrito.png"
+              onmouseover="this.src='images/carritonaranja.png'" src="images/carritonaranja.png">
           </a></li>
       </ul>
     </nav>
   </header>
-
+  <button class="admin">Iniciar Sesion</button>
   <h2>Nuestros productos</h2>
   <p>
     Actualmente poseemos una amplia gama de licores y cachimbas gracias al trabajo de nuestros proveedores y al de
@@ -35,28 +37,6 @@
     lleve encima,
     <br>ya que nuestros productos se acomodan económicamente a todos.
   </p>
-=======
-    <a href="index.html"><img onmouseout="this.src='images/logoblanco.png'" src="images/logoblanco.png" width="50px" height="50px" href="index.html" onmouseover="this.src='images/logonaranja.png'" src="images/logonaranja.png" width="50px" height="50px" ></a>
-    <nav>
-        <ul>
-            <li><a href="index.html"> <b>Inicio</b> </a></li>
-            <li><a href="catalogo.html"> <b>Catálogo</b> </a></li>
-            <li><a href="contacto.html"> <b>Contacto</b> </a></li>
-            <li><a href="nosotros.html"> <b>Nosotros</b> </a></li>
-            <li><a class="carritoLogoLink" href="carrito.html">
-                    <img class="carritoFoto" onmouseout="this.src='images/carrito.png'" src="images/carrito.png" onmouseover="this.src='images/carritonaranja.png'" src="images/carritonaranja.png">
-                </a></li>
-        </ul>
-    </nav>
-</header>
-<button class="admin">Iniciar Sesion</button>
-      <h2>Nuestros productos</h2>
-      <p>
-        Actualmente poseemos una amplia gama de licores y cachimbas gracias al trabajo de nuestros proveedores y al de nuestros empleados
-        <br>Nuestros clientes podrán elegir en todo momento su producto favorito sin tener que preocuparse del dinero que lleve encima, 
-        <br>ya que nuestros productos se acomodan económicamente a todos.
-      </p>
->>>>>>> af42be837921f360182332d0cabf303898f0cca8
 
   <div class="buscador"><input type="text" id="buscador" placeholder="Buscar..."></div>
 
@@ -80,14 +60,18 @@
             <p class="descripcion">Sabor de cachimba de mango</p>
             <p class="id">ID: C01</p>
           </td>
-          <td><p class="precio">20€</p></td>
+          <td>
+            <p class="precio">20€</p>
+          </td>
           <td>
             <input type="number" class="contador" min="0">
           </td>
           <td>
             <input type="button" class="comprar" value="Añadir a carrito">
           </td>
-          <td><p class="puntuacion">8.75/10</p></td>
+          <td>
+            <p class="puntuacion">8.75/10</p>
+          </td>
         </tr>
         <tr class="pistacho">
           <td><img src="images/250g-pistachio-kiss_1.jpg" class="fotoProductos"></td>
@@ -95,14 +79,18 @@
             <p class="descripcion">Sabor de cachimba de pistacho</p>
             <p class="id">ID: C02</p>
           </td>
-          <td><p class="precio">25€</p></td>
+          <td>
+            <p class="precio">25€</p>
+          </td>
           <td>
             <input type="number" class="contador" min="0">
           </td>
           <td>
             <input type="button" class="comprar" value="Añadir a carrito">
           </td>
-          <td><p class="puntuacion">8/10</p></td>
+          <td>
+            <p class="puntuacion">8/10</p>
+          </td>
         </tr>
         <tr class="clorofila">
           <td><img src="images/smokain-intensify-menta-clorofila.jpg" class="fotoProductos"></td>
@@ -110,14 +98,18 @@
             <p class="descripcion">Sabor de cachimba de clorofila</p>
             <p class="id">ID: C03</p>
           </td>
-          <td><p class="precio">20€</p></td>
+          <td>
+            <p class="precio">20€</p>
+          </td>
           <td>
             <input type="number" class="contador" min="0">
           </td>
           <td>
             <input type="button" class="comprar" value="Añadir a carrito">
           </td>
-          <td><p class="puntuacion">9/10</p></td>
+          <td>
+            <p class="puntuacion">9/10</p>
+          </td>
         </tr>
         <tr class="bacon">
           <td><img src="images/BBQ-600-rhj7fn.jpg" class="fotoProductos"></td>
@@ -125,14 +117,18 @@
             <p class="descripcion">Sabor de cachimba de bacon</p>
             <p class="id">ID: C04</p>
           </td>
-          <td><p class="precio">28€</p></td>
+          <td>
+            <p class="precio">28€</p>
+          </td>
           <td>
             <input type="number" class="contador" min="0">
           </td>
           <td>
             <input type="button" class="comprar" value="Añadir a carrito">
           </td>
-          <td><p class="puntuacion">8.5/10</p></td>
+          <td>
+            <p class="puntuacion">8.5/10</p>
+          </td>
         </tr>
         <tr class="marihuana">
           <td><img src="images/DSC_6087_grande.jpg" class="fotoProductos"></td>
@@ -140,14 +136,18 @@
             <p class="descripcion">Sabor de cachimba de marihuana</p>
             <p class="id">ID: C05</p>
           </td>
-          <td><p class="precio">30€</p></td>
+          <td>
+            <p class="precio">30€</p>
+          </td>
           <td>
             <input type="number" class="contador" min="0">
           </td>
           <td>
             <input type="button" class="comprar" value="Añadir a carrito">
           </td>
-          <td><p class="puntuacion">9.75/10</p></td>
+          <td>
+            <p class="puntuacion">9.75/10</p>
+          </td>
         </tr>
       </tbody>
     </table>
@@ -171,14 +171,18 @@
             <p class="descripcion">Licor de maracuya</p>
             <p class="id">ID: L01</p>
           </td>
-          <td><p class="precio">30€</p></td>
+          <td>
+            <p class="precio">30€</p>
+          </td>
           <td>
             <input type="number" class="contador" min="0">
           </td>
           <td>
             <input type="button" class="comprar" value="Añadir a carrito">
           </td>
-          <td><p class="puntuacion">9/10</p></td>
+          <td>
+            <p class="puntuacion">9/10</p>
+          </td>
         </tr>
         <tr class="mandarina">
           <td><img src="images/mandarina.png" class="fotoProductos"></td>
@@ -186,14 +190,18 @@
             <p class="descripcion">Licor de mandarina</p>
             <p class="id">ID: L02</p>
           </td>
-          <td><p class="precio">25€</p></td>
+          <td>
+            <p class="precio">25€</p>
+          </td>
           <td>
             <input type="number" class="contador" min="0">
           </td>
           <td>
             <input type="button" class="comprar" value="Añadir a carrito">
           </td>
-          <td><p class="puntuacion">8.5/10</p></td>
+          <td>
+            <p class="puntuacion">8.5/10</p>
+          </td>
         </tr>
         <tr class="manzana">
           <td><img src="images/DSC_6087_grande.jpg" class="fotoProductos"></td>
@@ -201,14 +209,18 @@
             <p class="descripcion">Licor de manzana</p>
             <p class="id">ID: L03</p>
           </td>
-          <td><p class="precio">25€</p></td>
+          <td>
+            <p class="precio">25€</p>
+          </td>
           <td>
             <input type="number" class="contador" min="0">
           </td>
           <td>
             <input type="button" class="comprar" value="Añadir a carrito">
           </td>
-          <td><p class="puntuacion">9/10</p></td>
+          <td>
+            <p class="puntuacion">9/10</p>
+          </td>
         </tr>
         <tr class="coco">
           <td><img src="images/coco.png" class="fotoProductos"></td>
@@ -216,14 +228,18 @@
             <p class="descripcion">Sabor de cachimba de marihuana</p>
             <p class="id">ID: L04</p>
           </td>
-          <td><p class="precio">35€</p></td>
+          <td>
+            <p class="precio">35€</p>
+          </td>
           <td>
             <input type="number" class="contador" min="0">
           </td>
           <td>
             <input type="button" class="comprar" value="Añadir a carrito">
           </td>
-          <td><p class="puntuacion">9.75/10</p></td>
+          <td>
+            <p class="puntuacion">9.75/10</p>
+          </td>
         </tr>
         <tr class="pepinillo">
           <td><img src="images/pepinillo.png" class="fotoProductos"></td>
@@ -231,14 +247,18 @@
             <p class="descripcion">Licor de pepinillo</p>
             <p class="id">ID: L05</p>
           </td>
-          <td><p class="precio">30€</p></td>
+          <td>
+            <p class="precio">30€</p>
+          </td>
           <td>
             <input type="number" class="contador" min="0">
           </td>
           <td>
             <input type="button" class="comprar" value="Añadir a carrito">
           </td>
-          <td><p class="puntuacion">9/10</p></td>
+          <td>
+            <p class="puntuacion">9/10</p>
+          </td>
         </tr>
       </tbody>
     </table>

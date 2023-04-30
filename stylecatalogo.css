@@ -67,94 +67,7 @@ p {
     border-spacing: 50px;
 }
 
-<<<<<<< HEAD
-=======
-.fotoProductos{
-    height: 200px;
-    width: 200px;
-}
 
-.fotoProductos:hover{
-    cursor: pointer;
-    box-shadow: rgba(255, 255, 255) 0px 5px 15px;
-    transform: scale(1.1);
-}
-
-.descripciones{
-    padding-bottom: 105px;
-}
-
-.descripcion:hover{
-    cursor: pointer;
-    box-shadow: rgba(255, 255, 255) 0px 5px 15px;
-}
-
-.id:hover{
-    cursor: pointer;
-    box-shadow: rgba(255, 255, 255) 0px 5px 15px;
-}
-
-.PvP{
-   padding-bottom: 150px;
-}
-
-.precio:hover{
-    cursor: pointer;
-    box-shadow: rgba(255, 255, 255) 0px 5px 15px;
-}
-
-.cantidad{
-   padding-bottom: 150px;
-}
-
-.botones{
-    padding-bottom: 150px;
-}
-
-.contador:hover{
-    cursor: pointer;
-    box-shadow: rgba(255, 255, 255) 0px 5px 15px;
-}
-
-.comprame:hover{
-    cursor: pointer;
-    background: linear-gradient(to right, #061700, #52c234);
-    color:#ffffff;
-}
-
-.puntuaciones{
-    padding-bottom: 150px;
-}
-
-.puntos:hover{
-    cursor: pointer;
-    box-shadow: rgba(255, 255, 255) 0px 5px 15px;
-}
-
-
-
-.productos:hover{
-
-    cursor:pointer;
-    color:orange;
-    transform: scale(1.1);
-}
-
-.carritoLogoLink{
-    display: inline-block;
-}
-
-.carritoFoto{
-    display: flex;
-    height: 35px;
-    width: 40px;
-}
-
-.buscador{
-    display: inline-block;
-}
-
->>>>>>> af42be837921f360182332d0cabf303898f0cca8
 .cachimbo{
     text-align: center;
     color: #ffffff;
@@ -169,7 +82,6 @@ p {
     transform: scale(1.1);
 }
 
-<<<<<<< HEAD
 .indiceSabor{
     font-size: 20px;
 }
@@ -230,74 +142,3 @@ p {
     display: flex;
     justify-content: center;
 }
-
-=======
-.admin {
-    display: block;
-    float: right;
-  }
-
-
-@media (max-width: 768px) {
-    header {
-      height: 50px;
-      padding: 0;
-    }
-  
-    nav li {
-      padding: 0 10px;
-    }
-  
-    ul li a {
-      margin-right: 5px;
-    }
-  
-    h2 {
-      font-size: 20px;
-    }
-  
-    p {
-      font-size: 14px;
-    }
-  
-    .tabla {
-      overflow-x: auto;
-      border-spacing: 5px;
-    }
-  
-    .fotoProductos {
-      height: 150px;
-      width: 150px;
-    }
-  
-    .descripciones,
-    .PvP,
-    .cantidad,
-    .botones,
-    .puntuaciones {
-      padding-bottom: 25px;
-    }
-  
-    .carritoFoto {
-      height: 25px;
-      width: 30px;
-    }
-
-    .fotoProductos{
-        height: 100px;
-        width: 100px;
-    }
-
-    th{
-        width: 30%;
-    }
-
-    td{
-        width: 30%;;
-    }
-
-    input[type = number]{
-        width: 50%;
-    }
-  }
->>>>>>> af42be837921f360182332d0cabf303898f0cca8
