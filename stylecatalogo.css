@@ -143,3 +143,18 @@ p {
     display: flex;
     justify-content: center;
 }
+
+.admin {
+    display: block;
+    width: 8rem;
+    height: 2rem;
+    float: right;
+    color: #ffffff;
+    background-color: transparent;
+    border: #ffffff 2px solid;
+  }
+  
+  .admin:hover {
+    background-color:rgb(212, 140, 6) ;
+    
+  }
