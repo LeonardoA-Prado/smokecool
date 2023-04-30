@@ -113,6 +113,9 @@ p {
     background-color: #000000;
 }
 
+.Direccion p {
+  background-color: transparent;
+}
 
 @media (max-width: 768px) {
     header {
