@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Verdana;
     background: rgb(2,0,36);
     background: linear-gradient(to right, #061700, #52c234);
 }
@@ -65,6 +65,7 @@ p {
     color:white;
     border-collapse: separate;
     border-spacing: 50px;
+    border-radius: 15px;
 }
 
 
