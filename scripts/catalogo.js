@@ -793,3 +793,10 @@ const input = document.getElementById('buscador');
 function buscar() {
 
 }
+
+function borrarTodo() {
+    const catalogoContainer = document.querySelector('.Contenedor-Pokemon');
+    while (catalogoContainer.firstChild) {
+      catalogoContainer.firstChild.remove();
+    }
+  }
