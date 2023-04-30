@@ -45,103 +45,26 @@ p {
     padding: 5px;
 }
 
+.buscador{
+    display: flex;
+    justify-content: center;
+}
+
+.buscador:hover{
+    transform: scale(1.1);
+}
+
 .container{
     display: flex;
     justify-content: center;
 }
 
-.tabla{
-    background-color:black ;
+.tablaSabores{
+    margin: 0 auto;
+    background-color:black;
     color:white;
     border-collapse: separate;
     border-spacing: 50px;
-}
-
-.fotoProductos{
-    height: 200px;
-    width: 200px;
-}
-
-.fotoProductos:hover{
-    cursor: pointer;
-    box-shadow: rgba(255, 255, 255) 0px 5px 15px;
-    transform: scale(1.1);
-}
-
-.descripciones{
-    padding-bottom: 105px;
-}
-
-.descripcion:hover{
-    cursor: pointer;
-    box-shadow: rgba(255, 255, 255) 0px 5px 15px;
-}
-
-.id:hover{
-    cursor: pointer;
-    box-shadow: rgba(255, 255, 255) 0px 5px 15px;
-}
-
-.PvP{
-   padding-bottom: 150px;
-}
-
-.precio:hover{
-    cursor: pointer;
-    box-shadow: rgba(255, 255, 255) 0px 5px 15px;
-}
-
-.cantidad{
-   padding-bottom: 150px;
-}
-
-.botones{
-    padding-bottom: 150px;
-}
-
-.contador:hover{
-    cursor: pointer;
-    box-shadow: rgba(255, 255, 255) 0px 5px 15px;
-}
-
-.comprame:hover{
-    cursor: pointer;
-    background: linear-gradient(to right, #061700, #52c234);
-    color:#ffffff;
-}
-
-.puntuaciones{
-    padding-bottom: 150px;
-}
-
-.puntos:hover{
-    cursor: pointer;
-    box-shadow: rgba(255, 255, 255) 0px 5px 15px;
-}
-
-.productos{
-    font-size: 20px;
-}
-
-.productos:hover{
-
-    cursor:pointer;
-    color:orange;
-    transform: scale(1.1);
-}
-
-.carritoLogoLink{
-    display: inline-block;
-}
-
-.carritoFoto{
-    display: flex;
-    height: 35px;
-    width: 40px;
-}
-
-.buscador{
-    display: inline-block;
 }
 
 .cachimbo{
@@ -157,3 +80,65 @@ p {
     color: orange;
     transform: scale(1.1);
 }
+
+.indiceSabor{
+    font-size: 20px;
+}
+
+.fotoProductos{
+    height: 150px;
+    width: 150px;
+}
+
+.fotoProductos:hover{
+    cursor: pointer;
+    box-shadow: rgba(255, 255, 255) 0px 5px 15px;
+    transform: scale(1.1);
+}
+
+.id:hover{
+    cursor: pointer;
+    box-shadow: rgba(255, 255, 255) 0px 5px 15px;
+}
+
+.descripcion:hover{
+    cursor: pointer;
+    box-shadow: rgba(255, 255, 255) 0px 5px 15px;
+}
+
+.precio:hover{
+    cursor: pointer;
+    box-shadow: rgba(255, 255, 255) 0px 5px 15px;
+}
+
+.contador:hover{
+    cursor: pointer;
+    box-shadow: rgba(255, 255, 255) 0px 5px 15px;
+}
+
+.comprar:hover{
+    cursor: pointer;
+    background: linear-gradient(to right, #eb8951, #c26134);
+    color:#ffffff;
+}
+
+.puntuacion:hover{
+    cursor: pointer;
+    box-shadow: rgba(255, 255, 255) 0px 5px 15px;
+}
+
+.carritoLogoLink{
+    display: inline-block;
+}
+
+.carritoFoto{
+    display: flex;
+    height: 35px;
+    width: 40px;
+}
+
+.buscador{
+    display: flex;
+    justify-content: center;
+}
+
