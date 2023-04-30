@@ -156,6 +156,11 @@ p {
     transform: scale(1.1);
 }
 
+.admin {
+    display: block;
+    float: right;
+  }
+
 
 @media (max-width: 768px) {
     header {
