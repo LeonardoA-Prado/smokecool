@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-png" href="images/icon-narguile.png">
+  <title>Catálogo</title>
+  <link rel="stylesheet" href="stylecatalogo.css">
+</head>
+
+<body>
+  <header>
+    <a href="index.html"><img onmouseout="this.src='images/logoblanco.png'" src="images/logoblanco.png" width="50px" height="50px" href="index.html" onmouseover="this.src='images/logonaranja.png'" src="images/logonaranja.png" width="50px" height="50px" ></a>
+    <nav>
+        <ul>
+            <li><a href="index.html"> <b>Inicio</b> </a></li>
+            <li><a href="catalogo.html"> <b>Catálogo</b> </a></li>
+            <li><a href="contacto.html"> <b>Contacto</b> </a></li>
+            <li><a href="nosotros.html"> <b>Nosotros</b> </a></li>
+            <li><a class="carritoLogoLink" href="carrito.html">
+                    <img class="carritoFoto" onmouseout="this.src='images/carrito.png'" src="images/carrito.png" onmouseover="this.src='images/carritonaranja.png'" src="images/carritonaranja.png">
+                </a></li>
+        </ul>
+    </nav>
+</header>
+<button class="admin">Iniciar Sesion</button>
+      <h2>Nuestros productos</h2>
+      <p>
+        Actualmente poseemos una amplia gama de licores y cachimbas gracias al trabajo de nuestros proveedores y al de nuestros empleados
+        <br>Nuestros clientes podrán elegir en todo momento su producto favorito sin tener que preocuparse del dinero que lleve encima, 
+        <br>ya que nuestros productos se acomodan económicamente a todos.
+      </p>
+
+  <div class="buscador"><input type="text" id="buscador" placeholder="Buscar..."></div>
+
+  <div id="items"></div>
+
+  
+    <template class="template-card">
+        <h1 class="cachimbo">Sabores de cachimbas</h1>
+        <table class="tablaSabores">
+        <thead>
+         <tr class="indiceSabor">
+              <td>Productos</td>
+              <td>Descripción</td>
+              <td>Precio por unidad</td>
+              <td>Cantidad</td>
+              <td>Comprar</td>
+              <td>Nota</td>
+         </tr>
+        </thead>
+        <tbody>
+           <tr class="mango">
+                <td><img src="images/71HXHqmeCmL.__AC_SX300_SY300_QL70_ML2_.jpg" class="fotoProductos"></td>
+                <td>
+                    <p class="descripcion">Sabor de cachimba de Mango</p>
+                    <p class="id">ID: C01</p>
+                </td>
+                <td><p class="precio">20€</p></td>
+                <td>
+                    <input type="number" class="contador" min="0">
+                </td>
+                <td>
+                     <input type="button" class="comprar" value="Añadir a carrito">
+                </td>
+                <td><p class="puntuacion">8.75/10</p></td>
+            </tr>
+    </template>
+
+  <script src="scripts/catalogoPrueba.js"></script>
+</body>
+
+</html>
