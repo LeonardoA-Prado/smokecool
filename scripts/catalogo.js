@@ -15,9 +15,12 @@ const productos = [];
 
 const filasTabla = document.querySelectorAll(".tablaSabores tbody tr");
 filasTabla.forEach(fila => {
+  const cantidadInput = fila.querySelector(".contador");
+  const cantidad = cantidadInput.value.trim();
+  const cantidadNum = cantidad !== "" ? parseInt(cantidad) : 0;
   const producto = {
     id: fila.querySelector(".id").textContent,
-    cantidad: fila.querySelector(".contador").value,
+    cantidad: cantidadNum
   };
   productos.push(producto);
 });
