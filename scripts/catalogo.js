@@ -11,19 +11,16 @@ buscador.addEventListener("input", function () {
     });
 });
 
-const tabla = document.getElementsByTagName('table')[0];
-const filasTabla = tabla.querySelectorAll('tr');
+const productos = [];
 
-const datos = [];
+const filasTabla = document.querySelectorAll(".tablaSabores tbody tr");
+filasTabla.forEach(fila => {
+  const producto = {
+    id: fila.querySelector(".id").textContent,
+    cantidad: fila.querySelector(".contador").value,
+  };
+  productos.push(producto);
+});
 
-for (let i = 1; i < filasTabla.length; i++) {
-  const celdas = filas[i].querySelectorAll('td');
-  const descripcion = celdas[1].querySelector('.descripcion').textContent;
-  const id = celdas[1].querySelector('.id').textContent;
-  const precio = celdas[2].querySelector('.precio').textContent;
-  const cantidad = celdas[3].querySelector('.contador').value;
-  datos.push({descripcion, id, precio, cantidad});
-}
-
-console.log(datos);
+console.log(productos);
 
