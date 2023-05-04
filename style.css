@@ -273,7 +273,7 @@ background-color:rgb(212, 140, 6) ;
 .titulos:hover{
   cursor: pointer;
   color: orange;
-  transform: scale(1.025);
+  transform: scale(1.1);
 }
 @media (max-width: 768px) {
   header {
