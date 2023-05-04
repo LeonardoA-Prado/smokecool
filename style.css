@@ -114,6 +114,52 @@ width: 40px;
 .enlace{
   color: rgb(255, 123, 0);
   text-decoration: none;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+}
+
+.enlace::before,
+.enlace::after {
+ content: '';
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+.enlace::before {
+  background: linear-gradient(to right, #FF7B00, #ffffff);
+  height: 2px;
+  bottom: 0;
+  transform-origin: 100% 50%;
+  transform: scaleX(0);
+  transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+.enlace::after {
+  content: attr(data-replace);
+  height: 100%;
+  top: 0;
+  transform-origin: 100% 50%;
+  transform: translate3d(200%, 0, 0);
+  transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+  color: rgb(255, 123, 0);
+}
+
+.enlace:hover::before {
+  transform-origin: 0% 50%;
+  transform: scaleX(1);
+}
+.enlace:hover::after {
+  transform: translate3d(0, 0, 0);
+  font-weight: bold;
+}
+
+.enlace b {
+  display: inline-block;
+  transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.enlace:hover b {
+  transform: translate3d(-200%, 0, 0);
 }
 
 .grid-item {
