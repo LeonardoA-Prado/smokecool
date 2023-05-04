@@ -40,7 +40,7 @@ a::after {
   left: 0;
 }
 a::before {
-  background-color: #52c234;
+  background: linear-gradient(to right, #184706, #52c234);
   height: 2px;
   bottom: 0;
   transform-origin: 100% 50%;
