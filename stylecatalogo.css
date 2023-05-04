@@ -128,6 +128,20 @@ p {
     transform: scale(1.1);
 }
 
+.cachimbo2{
+    text-align: center;
+    color: #ffffff;
+    font-size: 20px;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    background: none;
+}
+
+.cachimbo2:hover{
+    cursor: pointer;
+    color: orange;
+    transform: scale(1.1);
+}
+
 .indiceSabor{
     font-size: 20px;
 }
