@@ -231,3 +231,26 @@ p {
     color: orange;
     transform: scale(1.1);
   }
+
+  #box{
+    display: none;
+    width: 20px;
+    height: 20px;
+    background-color: #52c234;
+    position: fixed;
+    left: 1480px;
+    top:15px;
+    z-index: 9999;
+    border-radius: 10px;
+    color:white;
+  }
+  
+  #number{
+    text-align: center;
+    font-size: 15px;
+    background: none;
+    position: absolute;
+    left: 50%;
+    top: -5px;
+    transform: translate(-50%, -50%);
+  }
