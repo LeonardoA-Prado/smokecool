@@ -27,3 +27,21 @@ filasTabla.forEach(fila => {
 
 console.log(productos);
 
+var n =0;
+
+function IncrementarNumero() {
+  n = n+1
+  document.getElementById("number").innerHTML=n;
+  OpcionCero();
+}
+
+function OpcionCero() {
+  if(document.getElementById("number").innerHTML==0){
+    document.getElementById("box").style.display="none";
+  }
+  else{
+    document.getElementById("box").style.display="block";
+  }
+}
+
+
