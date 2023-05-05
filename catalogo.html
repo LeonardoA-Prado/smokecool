@@ -10,7 +10,10 @@
   <link rel="stylesheet" href="stylecatalogo.css">
 </head>
 
-<body>
+<body onload="OpcionCero()">
+  
+  <div id="box" ><p id="number">0</p></div>
+
   <header>
     <a href="index.html"><img onmouseout="this.src='images/logoblanco.png'" src="images/logoblanco.png" width="50px" height="50px" href="index.html" onmouseover="this.src='images/logonaranja.png'" src="images/logonaranja.png" width="50px" height="50px" ></a>
     <nav>
@@ -34,7 +37,6 @@
       </p>
 
   <div class="buscador"><input type="text" id="buscador" placeholder="Buscar..."></div>
-
   <div class="content">
     <h1 class="cachimbo">Sabores de cachimbas</h1>
     <table class="tablaSabores">
@@ -60,7 +62,7 @@
             <input type="number" class="contador" min="0">
           </td>
           <td>
-            <input type="button" class="comprar" value="Añadir a carrito">
+            <input type="button" class="comprar" value="Añadir a carrito" onclick="IncrementarNumero()">
           </td>
           <td><p class="puntuacion">8.75/10</p></td>
         </tr>
@@ -75,7 +77,7 @@
             <input type="number" class="contador" min="0">
           </td>
           <td>
-            <input type="button" class="comprar" value="Añadir a carrito">
+            <input type="button" class="comprar" value="Añadir a carrito" onclick="IncrementarNumero()">
           </td>
           <td><p class="puntuacion">8/10</p></td>
         </tr>
@@ -90,7 +92,7 @@
             <input type="number" class="contador" min="0">
           </td>
           <td>
-            <input type="button" class="comprar" value="Añadir a carrito">
+            <input type="button" class="comprar" value="Añadir a carrito" onclick="IncrementarNumero()">
           </td>
           <td><p class="puntuacion">9/10</p></td>
         </tr>
@@ -105,7 +107,7 @@
             <input type="number" class="contador" min="0">
           </td>
           <td>
-            <input type="button" class="comprar" value="Añadir a carrito">
+            <input type="button" class="comprar" value="Añadir a carrito" onclick="IncrementarNumero()">
           </td>
           <td><p class="puntuacion">8.5/10</p></td>
         </tr>
@@ -120,7 +122,7 @@
             <input type="number" class="contador" min="0">
           </td>
           <td>
-            <input type="button" class="comprar" value="Añadir a carrito">
+            <input type="button" class="comprar" value="Añadir a carrito" onclick="IncrementarNumero()">
           </td>
           <td><p class="puntuacion">9.75/10</p></td>
         </tr>
@@ -151,7 +153,7 @@
             <input type="number" class="contador" min="0">
           </td>
           <td>
-            <input type="button" class="comprar" value="Añadir a carrito">
+            <input type="button" class="comprar" value="Añadir a carrito" onclick="IncrementarNumero()">
           </td>
           <td><p class="puntuacion">9/10</p></td>
         </tr>
@@ -166,7 +168,7 @@
             <input type="number" class="contador" min="0">
           </td>
           <td>
-            <input type="button" class="comprar" value="Añadir a carrito">
+            <input type="button" class="comprar" value="Añadir a carrito" onclick="IncrementarNumero()">
           </td>
           <td><p class="puntuacion">8.5/10</p></td>
         </tr>
@@ -181,7 +183,7 @@
             <input type="number" class="contador" min="0">
           </td>
           <td>
-            <input type="button" class="comprar" value="Añadir a carrito">
+            <input type="button" class="comprar" value="Añadir a carrito" onclick="IncrementarNumero()">
           </td>
           <td><p class="puntuacion">9/10</p></td>
         </tr>
@@ -196,7 +198,7 @@
             <input type="number" class="contador" min="0">
           </td>
           <td>
-            <input type="button" class="comprar" value="Añadir a carrito">
+            <input type="button" class="comprar" value="Añadir a carrito" onclick="IncrementarNumero()">
           </td>
           <td><p class="puntuacion">9.75/10</p></td>
         </tr>
@@ -211,7 +213,7 @@
             <input type="number" class="contador" min="0">
           </td>
           <td>
-            <input type="button" class="comprar" value="Añadir a carrito">
+            <input type="button" class="comprar" value="Añadir a carrito" onclick="IncrementarNumero()">
           </td>
           <td><p class="puntuacion">9/10</p></td>
         </tr>
