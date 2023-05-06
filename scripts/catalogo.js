@@ -48,19 +48,64 @@ const cantidadMango = document.getElementById("CMango");
 cantidadMango.addEventListener("blur", function() {
   const idMango = document.getElementById("IdMango").textContent;
   const cMango = parseInt(cantidadMango.value.trim());
-  const index = productoMango.findIndex(mango => mango.id === idMango);
-  if (index >= 0 && cMango !== productoMango[index].cantidad) {
+  const indexMango = productoMango.findIndex(mango => mango.id === idMango);
+  if (indexMango >= 0 && cMango !== productoMango[indexMango].cantidad) {
     const updatedMango = {
       id: idMango,
       cantidad: cMango
     };
-    productoMango.splice(index, 1, updatedMango);
+    productoMango.splice(indexMango, 1, updatedMango);
   }
   console.log(productoMango);
 });
 
+//Input Pistacho
 
+const productoPistacho = [];
 
+function InputPistacho() {
+  const cantidadPistacho = document.getElementById("CPistacho");
+  const canPistacho = cantidadPistacho.value.trim();
+  const cPistacho = canPistacho !== "" ? parseInt(canPistacho) : 0;
+  const idPistacho = document.getElementById("IdPistacho").textContent;
+  let found = false;
+
+  for (let i = 0; i < productoPistacho.length; i++) {
+    if (productoPistacho[i].id === idPistacho) {
+      productoPistacho[i].cantidad = cPistacho;
+      found = true;
+      break;
+    }
+  }
+
+  if (!found) {
+    const proPistacho = {
+      id: idPistacho,
+      cantidad: cPistacho
+    };
+    productoPistacho.push(proPistacho);
+  }
+
+  console.log(productoPistacho);
+}
+
+const inputPistacho = document.getElementById("BPistacho");
+inputPistacho.addEventListener("input", InputPistacho());
+
+const cantidadPistacho = document.getElementById("CPistacho");
+cantidadPistacho.addEventListener("blur", function() {
+  const idPistacho = document.getElementById("IdPistacho").textContent;
+  const cPistacho = parseInt(cantidadPistacho.value.trim());
+  const indexPistacho = productoPistacho.findIndex(pistacho => pistacho.id === idPistacho);
+  if (indexPistacho >= 0 && cPistacho !== productoPistacho[indexPistacho].cantidad) {
+    const updatedPistacho = {
+      id: idPistacho,
+      cantidad: cPistacho
+    };
+    productoPistacho.splice(indexPistacho, 1, updatedPistacho);
+  }
+  console.log(productoPistacho);
+});
 
 
 var n =0;
