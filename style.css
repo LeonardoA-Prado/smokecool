@@ -248,6 +248,7 @@ background-color:rgb(212, 140, 6) ;
   align-items: center;
   justify-content: center;
   visibility: hidden;
+  
 }
 
 .ventana.active {
@@ -288,7 +289,7 @@ background-color:rgb(212, 140, 6) ;
 
 }
 
-.popup form .entrada input{
+.popup form input{
   width: 200px;
   height: 25px;
   border: 2px solid #49bb1c;

@@ -18,16 +18,26 @@ var abrirVentana = document.getElementById('admin'),
     popup = document.getElementById('popup'),
     cerrarVentana = document.getElementById('cerrar-ventana');
 
-abrirVentana.addEventListener('click',openWindow);
+abrirVentana.addEventListener('click', openWindow);
 cerrarVentana.addEventListener('click', closeWindow);
 
-function openWindow(accion){
+function openWindow(){
     ventana.classList.add('active');
     popup.classList.add('active');
 }
 
-function closeWindow(accion){
+function closeWindow(){
     ventana.classList.remove('active');
     popup.classList.remove('active');
 }
 
+
+const passwordInput = document.getElementById('password');
+const submitButton = document.getElementById('submit');
+
+submitButton.addEventListener('click', function(event) {
+event.preventDefault();
+if (passwordInput.value === '1234') {
+    window.location.href = 'usuarios.html';
+}
+});
