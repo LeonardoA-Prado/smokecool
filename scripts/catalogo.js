@@ -11,21 +11,57 @@ buscador.addEventListener("input", function () {
     });
 });
 
-const productos = [];
+//Input Mango para coger el id y la cantidad, se actualiza la cantidad si le vuelves a dar y crear un nuevo array con la cantidad cambiada
 
-const filasTabla = document.querySelectorAll(".tablaSabores tbody tr");
-filasTabla.forEach(fila => {
-  const cantidadInput = fila.querySelector(".contador");
-  const cantidad = cantidadInput.value.trim();
-  const cantidadNum = cantidad !== "" ? parseInt(cantidad) : 0;
-  const producto = {
-    id: fila.querySelector(".id").textContent,
-    cantidad: cantidadNum
-  };
-  productos.push(producto);
+const productoMango = [];
+
+function InputMango() {
+  const cantidadMango = document.getElementById("CMango");
+  const canMango = cantidadMango.value.trim();
+  const cMango = canMango !== "" ? parseInt(canMango) : 0;
+  const idMango = document.getElementById("IdMango").textContent;
+  let found = false;
+
+  for (let i = 0; i < productoMango.length; i++) {
+    if (productoMango[i].id === idMango) {
+      productoMango[i].cantidad = cMango;
+      found = true;
+      break;
+    }
+  }
+
+  if (!found) {
+    const proMango = {
+      id: idMango,
+      cantidad: cMango
+    };
+    productoMango.push(proMango);
+  }
+
+  console.log(productoMango);
+}
+
+const inputMango = document.getElementById("BMango");
+inputMango.addEventListener("input", InputMango());
+
+const cantidadMango = document.getElementById("CMango");
+cantidadMango.addEventListener("blur", function() {
+  const idMango = document.getElementById("IdMango").textContent;
+  const cMango = parseInt(cantidadMango.value.trim());
+  const index = productoMango.findIndex(mango => mango.id === idMango);
+  if (index >= 0 && cMango !== productoMango[index].cantidad) {
+    const updatedMango = {
+      id: idMango,
+      cantidad: cMango
+    };
+    productoMango.splice(index, 1, updatedMango);
+  }
+  console.log(productoMango);
 });
 
-console.log(productos);
+
+
+
 
 var n =0;
 
