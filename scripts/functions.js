@@ -33,7 +33,7 @@ function closeWindow(){
 
 
 const passwordInput = document.getElementById('password');
-const submitButton = document.getElementById('submit');
+const submitButton = document.getElementById('acceder');
 
 submitButton.addEventListener('click', function(event) {
 event.preventDefault();
