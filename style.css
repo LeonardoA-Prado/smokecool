@@ -424,6 +424,11 @@ background-color:rgb(212, 140, 6) ;
   background: linear-gradient(to right, #184706, #52c234);
 }
 
+.parrafos{
+  font-size: 25px;
+  margin-top: 0;
+}
+
 @media (max-width: 768px) {
   header {
     height: 50px;
