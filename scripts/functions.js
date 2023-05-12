@@ -54,3 +54,12 @@ const texts = {
         });
       });
   });
+
+  const barras = document.querySelectorAll(".barra");
+  const numBarras = barras.length;
+  
+  barras.forEach((barra) => {
+    const valor = barra.getAttribute("data-valor");
+    const ancho = 100 / numBarras;
+    barra.style.width = `${ancho}%`;
+    barra.style.height = `${valor}%`;});
