@@ -203,6 +203,11 @@ p {
     justify-content: center;
 }
 
+.parrafos{
+    font-size: 25px;
+    margin-top: 0;
+  }
+
 .admin {
     display: block;
     width: 8rem;
