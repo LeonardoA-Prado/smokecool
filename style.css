@@ -429,6 +429,78 @@ background-color:rgb(212, 140, 6) ;
   margin-top: 0;
 }
 
+#grafico {
+  width: 100%;
+  height: 400px;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  flex-wrap: wrap; /* Para ajustar automáticamente el tamaño de las barras */
+}
+
+#grafico .bar {
+  height: calc(100% * var(--value));
+  margin: 10px 10px;
+  background-color: #ddaf08;
+  color:#ffffff;
+  display: flex;
+  align-items: flex-end;
+  font-size: 20px;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  justify-content: center;
+  vertical-align: bottom;
+  width: calc((30% / 5) - 10px); /* La fórmula para 5 barras con margen de 10px */
+}
+
+
+.chart {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 100%;
+  gap: 10px; /* Aumentar el espacio entre las barras */
+  background-color: rgb(0, 0, 0); /* Cambiar el color de fondo */
+}
+
+.cuadrados {
+  display:inline-block
+}
+
+.azul, .rojo {
+  width: 20px;
+  height: 20px;
+  margin-bottom: 30px;
+  border-radius: 50%;
+  color: #ffffff;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+.azul {
+  background-color: #52c234;
+}
+
+.rojo {
+  background-color: #ddaf08;
+}
+
+.azul::after {
+  content: "Tabaco";
+margin-left: 24px;
+}
+
+.rojo::after {
+  content: "Alcohol";
+  margin-left: 24px;
+}
+
+.años{
+  display: flex;
+  justify-content: space-around;
+  color: #ffffff;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  font-size: 20px;
+}
+
 @media (max-width: 768px) {
   header {
     height: 50px;
