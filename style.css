@@ -208,7 +208,7 @@ width: 40px;
 .formulario input,
 .formulario textarea {
   resize: none;
-  width: 46%;
+  width: 100%;
   border: 1px solid #ffffff;
   background-color: transparent;
   color: #ffffff;
@@ -230,6 +230,9 @@ width: 40px;
   background-color: #000000;
 }
 
+.Direccion{
+  margin-top: 50px;
+}
 
 .Direccion p {
 background-color: transparent;
@@ -338,6 +341,12 @@ background-color:rgb(212, 140, 6) ;
 
 .inputsForm{
   font-size: 18px;
+}
+
+.contactos{
+  display:flex;
+  justify-content: space-evenly;
+  width: 100%;
 }
 
 .titulosFotos {
@@ -540,6 +549,10 @@ background:none
 
 #message.escribiendo {
   background-color: black;
+}
+
+.direinfo{
+  text-shadow: -1px 0 black, 0 1.5px black, 1.5px 0 black, 0 -1px black;
 }
 
 @media (max-width: 768px) {
