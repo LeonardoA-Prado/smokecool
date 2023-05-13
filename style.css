@@ -336,6 +336,10 @@ background-color:rgb(212, 140, 6) ;
   box-shadow: rgba(255, 255, 255) 0px 5px 15px;
 }
 
+.inputsForm{
+  font-size: 18px;
+}
+
 .titulosFotos {
   position: absolute;
   top: 0;
@@ -495,6 +499,47 @@ margin-left: 24px;
   color: #ffffff;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
   font-size: 20px;
+}
+
+#noti {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000000;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  color: #ffffff;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#noti.mostrar {
+  opacity: 1;
+}
+
+#notigrax{
+background:none
+}
+
+#notires{
+  background: none;
+}
+
+#email.escribiendo {
+  background-color: black;
+}
+
+#subject.escribiendo {
+  background-color: black;
+}
+
+#message.escribiendo {
+  background-color: black;
 }
 
 @media (max-width: 768px) {
