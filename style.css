@@ -552,7 +552,7 @@ background:none
 }
 
 .direinfo{
-  text-shadow: -1px 0 black, 0 1.5px black, 1.5px 0 black, 0 -1px black;
+  text-shadow: -1.5px 0 black, 0 1.5px black, 1.5px 0 black, 0 -1.5px black;
 }
 
 .slidecont{
