@@ -555,6 +555,35 @@ background:none
   text-shadow: -1px 0 black, 0 1.5px black, 1.5px 0 black, 0 -1px black;
 }
 
+.slidecont{
+  width: 1045px;
+  margin: 0 auto;
+}
+
+.slide{position:relative;
+  animation:animateleft 0.4s}
+  @keyframes animateleft
+  {from
+    {left:-300px;opacity:0}
+     to
+     {left:0;opacity:1}
+}
+
+.text {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background:none;
+  color: white;
+  padding: 10px;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  font-size: 44px;
+  font-family: Arial, sans-serif;
+  z-index: 99;
+}
+
+
 @media (max-width: 768px) {
   header {
     height: 50px;
