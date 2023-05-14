@@ -1,17 +1,22 @@
 const form = document.querySelector('.formulario');
-form.addEventListener('submit', saveData);
+const emailInput = document.querySelector('#email');
+const subjectInput = document.querySelector('#subject');
+const messageInput = document.querySelector('#message');
 
-function saveData(event) {
-    event.preventDefault();
-    const email = document.getElementById('email').value;
-    const subject = document.getElementById('subject').value;
-    const message = document.getElementById('message').value;
-   
-    const data = {email, subject, message};
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  
+  const formData = {
+    email: emailInput.value,
+    subject: subjectInput.value,
+    message: messageInput.value,
+  };
+  localStorage.setItem('formData', JSON.stringify(formData));
+  
+  window.location.href = 'contacto.html';
+});
 
-    localStorage.setItem('formData', JSON.stringify(data));
-    
-}
+
 
 const miBoton = document.querySelector('#boton');
 const miNotificacion = document.querySelector('#noti');
