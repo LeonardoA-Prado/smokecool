@@ -341,6 +341,7 @@ background-color:rgb(212, 140, 6) ;
 
 .inputsForm{
   font-size: 18px;
+  width: 100% ; 
 }
 
 .contactos{
@@ -583,6 +584,9 @@ background:none
   z-index: 99;
 }
 
+.informacion{
+  display: inline-block;;
+}
 
 @media (max-width: 768px) {
   header {
