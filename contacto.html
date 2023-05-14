@@ -29,20 +29,29 @@
     <button class="admin" id="admin">Iniciar Sesion</button>
     <div class="contactos">
 
-        <form action="" class="formulario">
+        <form class="formulario" onsubmit="mostrarInformacion(event)">
             <div>
-                <h2 class ="titulos">Formulario de Contacto</h2>
+              <h2 class="titulos">Formulario de Contacto</h2>
             </div>
-            <label for="email" class="direinfo">Email</label>
-            <input type="email" name="email" id="email" class="inputsForm" required><br>
-
-            <label for="subject" class="direinfo">Asunto</label>
-            <input type="text" name="subject" id="subject" class="inputsForm"><br>
-
-            <label for="message" class="direinfo">Mensaje</label>
-            <textarea name="message" id="message" cols="30" rows="10" required class="inputsForm"></textarea><br>
-
+            <div>
+              <label for="email" class="direinfo">Email</label>
+              <input type="email" name="email" id="email" class="inputsForm" required>
+            </div>
+          
+            <div>
+              <label for="subject" class="direinfo">Asunto</label>
+              <input type="text" name="subject" id="subject" class="inputsForm">
+            </div>
+          
+            <div>
+              <label for="message" class="direinfo">Mensaje</label>
+              <textarea name="message" id="message" cols="30" rows="10" required class="inputsForm"></textarea>
+            </div>
+               
+            <div>
             <button type="submit" id="boton" onsubmit="saveData(event)">Enviar</button>
+        </div>
+
             <div id="noti">
                 <p id="notigrax">x</p>
                 <p id="notires">xx</p>
@@ -76,7 +85,7 @@
 
     </div>
 
-    <script src="/scripts/form.js"></script>
+    <script src="scripts/form.js"></script>
     <script src="scripts/functions.js"></script>
 
 
