@@ -13,7 +13,6 @@ form.addEventListener('submit', (event) => {
   };
   localStorage.setItem('formData', JSON.stringify(formData));
   
-  window.location.href = 'contacto.html';
 });
 
 
