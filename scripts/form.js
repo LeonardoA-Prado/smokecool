@@ -24,13 +24,19 @@ const miTexto = document.querySelector('#notires');
 
 miBoton.addEventListener('click', () => {
   miTitulo.textContent = '¡Gracias por contactarnos!';
-  miTexto.textContent = 'Le enviaremos una respuesta al correo electronico';
+  miTexto.textContent = 'Le enviaremos una respuesta al correo electrónico';
   miNotificacion.classList.add('mostrar');
 
+  if (emailInput.value === "" || subjectInput.value === "" || messageInput.value === "") {
+    miTitulo.textContent = "El formato de entrada está mal";
+    miTexto.textContent = "Por favor, introduce el formato correcto";
+  } 
+  
   setTimeout(() => {
     miNotificacion.classList.remove('mostrar');
-  }, 2000);
+  }, 3000);
 });
+
 
 const miInput = document.querySelector('#email');
 
