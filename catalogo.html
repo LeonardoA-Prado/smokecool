@@ -8,6 +8,7 @@
   <link rel="icon" type="image/x-png" href="images/icon-narguile.png">
   <title>Catálogo</title>
   <link rel="stylesheet" href="stylecatalogo.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body onload="OpcionCero()">
@@ -28,7 +29,21 @@
         </ul>
     </nav>
 </header>
-<button class="admin">Iniciar Sesion</button>
+<button id="admin" class="admin">Iniciar Sesion</button>
+<div class="ventana" id="ventana">
+  <div class="popup" id="popup">
+      <button class="cerrar-ventana" id="cerrar-ventana">X</button>
+      <h3>Iniciar Sesion</h3>
+      <h4>Solo Administradores</h4>
+      <form action="">
+          <div class="entrada">
+              <input type="password" id="password" placeholder="Contraseña" required>
+          </div>
+          <input type="submit" id="acceder" value="Acceder"  class="submit">
+      </form>
+  </div>
+</div>
+
       <h2 class="titulos">Nuestros productos</h2>
       <p class="parrafos">
         Actualmente poseemos una amplia gama de licores y cachimbas gracias al trabajo de nuestros proveedores y al de nuestros empleados
@@ -219,24 +234,11 @@
       </tbody>
     </table>
   </div>
-
-  <div class="ventana" id="ventana">
-    <div class="popup" id="popup">
-        <button class="cerrar-ventana" id="cerrar-ventana">X</button>
-        <h3>Iniciar Sesion</h3>
-        <h4>Solo Administradores</h4>
-        <form action="">
-            <div class="entrada">
-                <input type="password" id="password" placeholder="Contraseña" required>
-            </div>
-            <input type="submit" id="acceder" value="Acceder"  class="submit">
-        </form>
-    </div>
 </div>
-
+<script src="scripts/functions.js"></script>
   
   <script src="scripts/catalogo.js"></script>
-  <script src="scripts/functions.js"></script>
+
   
 </body>
 
