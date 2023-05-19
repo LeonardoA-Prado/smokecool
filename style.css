@@ -719,4 +719,21 @@ a:hover b {
   width: 100px;
 }
 
+.logoInicio2{
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  width: 100%;
+  height: 100%;
+}
+
+.slide{
+  width: 37% !important;
+  height: 50% !important;
+}
+
+.imagenesLocal{
+  width: 100% !important;
+  height: 50% !important;
+}
 }
