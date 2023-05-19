@@ -259,3 +259,46 @@ p {
     top: -5px;
     transform: translate(-50%, -50%);
   }
+
+.catalogo {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.imagenProducto {
+  width: 200px;
+  height: 200px;
+}
+
+.tarjeta {
+  background-color: #000000;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+}
+
+.tarjeta:hover {
+  box-shadow: 0 0 15px rgb(0, 0, 0);
+  background-color: rgb(20, 20, 20);
+}
+
+.tarjeta:hover .nombreProducto, .tarjeta:hover .precioProducto{
+  color:rgb(212, 140, 6);
+}
+
+.comprame {
+  background-color: yellow;
+  border: none;
+  height: 30px;
+  border-radius: 20px;
+}
+
+.comprame:hover {
+  box-shadow: 0 0 15px rgb(255, 251, 2);
+  font-weight: bold;
+}
+
+.precioProducto {
+  color: white;
+}

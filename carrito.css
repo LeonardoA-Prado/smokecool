@@ -1,0 +1,60 @@
+.carrito {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.carritoContenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.tituloCarrito {
+    text-align: center;
+}
+
+.botonCompra {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+
+.compra {
+    border-radius: 25px;
+    height: 50px;
+    width: 100px;
+}
+
+.compra:hover {
+    background-color: rgb(62, 140, 214);
+    color: white;
+    box-shadow: 0 0 15px rgb(255, 255, 255);
+}
+
+.tablaCarrito {
+    border-collapse: collapse;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.cabezera {
+    background-color: rgb(134, 132, 132);
+}
+
+.tablacarrito thead {
+    background-color: black;
+}
+
+.tablaCarrito td {
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.tablaCarrito tbody tr:nth-child(odd) {
+    background-color: #a9dfbf;
+}
+
+.tablaCarrito tbody tr:nth-child(even) {
+    background-color: #7dcea0;
+}

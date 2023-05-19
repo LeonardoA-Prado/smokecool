@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylecatalogo.css">
+    <link rel="stylesheet" href="carrito.css">
     <title>Document</title>
 </head>
 <body>
@@ -24,7 +25,28 @@
         </nav>
     </header>
 
+    <div class="tituloCarrito">
+        <h2 class="titulos">Carrito</h2>
+    </div>
+
+    <div class="carritoContenedor">
+        <table class="tablaCarrito">
+            <thead class="cabezera">
+                <td><b>Producto</b></td>
+                <td><b>Imagen</b></td>
+                <td><b>Precio</b></td>
+                <td><b>Eliminar</b></td>
+            </thead>
+            <tbody id="carrito"></tbody>
+        </table>
+    </div>
+
+    <div class="botonCompra">
+        <button id="compra" class="compra">Comprar</button>
+    </div>
+
     <script src="scripts/functions.js"></script>
+    <script src="scripts/carrito.js"></script>
     
 </body>
 </html>
