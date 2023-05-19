@@ -1,264 +1,16 @@
-body {
-    font-family: Verdana;
-    background: rgb(2,0,36);
-    background: linear-gradient(to right, #061700, #52c234);
+.buscadorDiv {
+  display: flex;
+  justify-content: center;
 }
 
-header {
-    position: sticky;
-    top: 0;
-    width: 100%;
-    height: 75px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px;
-    background-color: black;
+.buscador {
+  font-weight: bold;
+  color: black;
 }
 
-nav li {
-    display: inline-block;
-    list-style: none;
-    padding: 0px 20px;
+.buscador:hover {
+  box-shadow: 0 0 15px rgb(0, 0, 0);
 }
-   
-ul li a{
-    
-    color: #ffffff;
-    text-decoration: none;  
-    margin-right: 10px;
-
-}
-
-a {
-    overflow: hidden;
-    position: relative;
-    display: inline-block;
-  }
-  
-  a::before,
-  a::after {
-   content: '';
-    position: absolute;
-    width: 100%;
-    left: 0;
-  }
-  a::before {
-    background: linear-gradient(to right, #184706, #52c234);;
-    height: 2px;
-    bottom: 0;
-    transform-origin: 100% 50%;
-    transform: scaleX(0);
-    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
-  }
-  a::after {
-    content: attr(data-replace);
-    height: 100%;
-    top: 0;
-    transform-origin: 100% 50%;
-    transform: translate3d(200%, 0, 0);
-    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
-    color: #ffffff;
-  }
-  
-  a:hover::before {
-    transform-origin: 0% 50%;
-    transform: scaleX(1);
-  }
-  a:hover::after {
-    transform: translate3d(0, 0, 0);
-    font-weight: bold;
-  }
-
-  a b {
-    display: inline-block;
-    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
-  }
-  
-  a:hover b {
-    transform: translate3d(-200%, 0, 0);
-  }
-
-h2 {
-    color: #ffffff;
-    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-}
-
-p {
-    color: rgb(255, 255, 255);
-    background-color: rgb(24, 22, 22);
-    padding: 5px;
-}
-
-.buscador{
-    display: flex;
-    justify-content: center;
-}
-
-.buscador:hover{
-    transform: scale(1.1);
-}
-
-.container{
-    display: flex;
-    justify-content: center;
-}
-
-.tablaSabores{
-    margin: 0 auto;
-    background-color:black;
-    color:white;
-    border-collapse: separate;
-    border-spacing: 50px;
-    border-radius: 15px;
-}
-
-
-.cachimbo{
-    text-align: center;
-    color: #ffffff;
-    font-size: 30px;
-    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-    background: none;
-}
-
-.cachimbo:hover{
-    cursor: pointer;
-    color: orange;
-    transform: scale(1.1);
-}
-
-.cachimbo2{
-    text-align: center;
-    color: #ffffff;
-    font-size: 20px;
-    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-    background: none;
-}
-
-.cachimbo2:hover{
-    cursor: pointer;
-    color: orange;
-    transform: scale(1.1);
-}
-
-.indiceSabor{
-    font-size: 20px;
-}
-
-.fotoProductos{
-    height: 150px;
-    width: 150px;
-}
-
-.fotoProductos:hover{
-    cursor: pointer;
-    box-shadow: rgba(255, 255, 255) 0px 5px 15px;
-    transform: scale(1.1);
-}
-
-.id:hover{
-    cursor: pointer;
-    box-shadow: rgba(255, 255, 255) 0px 5px 15px;
-}
-
-.descripcion:hover{
-    cursor: pointer;
-    box-shadow: rgba(255, 255, 255) 0px 5px 15px;
-}
-
-.precio:hover{
-    cursor: pointer;
-    box-shadow: rgba(255, 255, 255) 0px 5px 15px;
-}
-
-.contador:hover{
-    cursor: pointer;
-    box-shadow: rgba(255, 255, 255) 0px 5px 15px;
-}
-
-.comprar:hover{
-    cursor: pointer;
-    background: linear-gradient(to right, #eb8951, #c26134);
-    color:#ffffff;
-}
-
-.puntuacion:hover{
-    cursor: pointer;
-    box-shadow: rgba(255, 255, 255) 0px 5px 15px;
-}
-
-.carritoLogoLink{
-    display: inline-block;
-}
-
-.carritoFoto{
-    display: flex;
-    height: 35px;
-    width: 40px;
-}
-
-.buscador{
-    display: flex;
-    justify-content: center;
-}
-
-.parrafos{
-    font-size: 25px;
-    margin-top: 0;
-  }
-
-.admin {
-    display: block;
-    width: 8rem;
-    height: 2rem;
-    float: right;
-    color: #ffffff;
-    background-color: transparent;
-    border: #ffffff 2px solid;
-  }
-  
-  .admin:hover {
-    background-color:rgb(212, 140, 6) ;
-  }
-
-  .titulos{
-    color: #ffffff;
-    display:inline-block;
-    font-size: 30px;
-    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-    background: none;
-    padding-left: 20px;
-  }
-  
-  .titulos:hover{
-    cursor: pointer;
-    color: orange;
-    transform: scale(1.1);
-  }
-
-  #box{
-    display: none;
-    width: 20px;
-    height: 20px;
-    background-color: #52c234;
-    position: fixed;
-    left: 1480px;
-    top:15px;
-    z-index: 9999;
-    border-radius: 10px;
-    color:white;
-  }
-  
-  #number{
-    text-align: center;
-    font-size: 15px;
-    background: none;
-    position: absolute;
-    left: 50%;
-    top: -5px;
-    transform: translate(-50%, -50%);
-  }
 
 .catalogo {
   display: grid;
@@ -274,8 +26,11 @@ p {
   background-color: #000000;
   border-radius: 10px;
   padding: 20px;
-  margin: 20px;
+  margin: auto;
+  margin-top: 20px;
   text-align: center;
+  height: 400px;
+  width: 470px;
 }
 
 .tarjeta:hover {
@@ -291,7 +46,7 @@ p {
   background-color: yellow;
   border: none;
   height: 30px;
-  border-radius: 20px;
+  border-radius: 30px;
 }
 
 .comprame:hover {

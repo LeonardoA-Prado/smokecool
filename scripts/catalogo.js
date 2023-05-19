@@ -30,14 +30,17 @@ productos.forEach((producto) => {
 })
 
 const buscador = document.getElementById("buscador");
-const filas = document.querySelectorAll(".tablaSabores tbody tr");
 
-buscador.addEventListener("input", function () {
-    const valorBuscado = this.value.trim().toLowerCase();
-
-    filas.forEach(function (fila) {
-        const textoFila = fila.textContent.trim().toLowerCase();
-        const coincide = textoFila.includes(valorBuscado);
-        fila.style.display = coincide ? "" : "none";
-    });
-});
+buscador.addEventListener('input', () => {
+    let busqueda = buscador.value.toLowerCase()
+    let tarjetas = tablaCatalogo.querySelectorAll('.tarjeta')
+  
+    tarjetas.forEach((tarjeta) => {
+      let nombreProducto = tarjeta.querySelector('.nombreProducto').textContent.toLowerCase()
+      
+      if (nombreProducto.includes(busqueda)) 
+        tarjeta.style.display = 'block';
+      else 
+        tarjeta.style.display = 'none';
+    })
+  })
