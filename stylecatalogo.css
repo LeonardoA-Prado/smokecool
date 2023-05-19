@@ -25,12 +25,11 @@
 .tarjeta {
   background-color: #000000;
   border-radius: 10px;
-  padding: 20px;
   margin: auto;
   margin-top: 20px;
   text-align: center;
   height: 400px;
-  width: 470px;
+  width: 400px;
 }
 
 .tarjeta:hover {

@@ -736,4 +736,14 @@ a:hover b {
   width: 100% !important;
   height: 50% !important;
 }
+
+header {
+  font-size: 10px;
+}
+
+.logo {
+  height: 30px;
+  width: 30px;
+}
+
 }
