@@ -705,4 +705,18 @@ a b {
 a:hover b {
   transform: translate3d(-200%, 0, 0);
 }
+
+.titulos {
+  font-size: 20px;
+}
+
+.parrafos {
+  font-size: 15px;
+}
+
+.admin {
+  height: 20px;
+  width: 100px;
+}
+
 }
