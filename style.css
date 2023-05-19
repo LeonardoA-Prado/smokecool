@@ -769,4 +769,56 @@ header {
 .chart {
   gap: 1px; /* Aumentar el espacio entre las barras */
 }
+
+.info-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.info-button {
+  background-color: white;
+  color: #4b4b4b;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  padding: px 12px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.info-button.selected {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border: 4px solid  #000000;
+  background-color: #fff;
+  color:  #000000;
+}
+.info-button:hover {
+  background-color: #f6f6f6;
+}
+
+.info-content {
+  color: rgb(255, 255, 255);
+  background-color: rgb(24, 22, 22);
+  padding: 25px;
+  font-size: 15px;
+}
+
+#botonesTitulo{
+font-size: 15px;
+}
+
+.grid-container {
+  margin:auto auto;
+  display: grid;
+  grid-template-columns: auto;
+}
+
+.grid-item {
+  position: relative;;
+  width: 275px;
+  height: 275px;
+  border: black 5px solid;
+  text-align: center;
+ overflow: hidden;
+ margin: 20px 0;
+}
 }
