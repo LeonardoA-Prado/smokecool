@@ -1,5 +1,3 @@
-
-
 var abrirVentana = document.getElementById('admin'), 
     ventana = document.getElementById('ventana'),
     popup = document.getElementById('popup'),

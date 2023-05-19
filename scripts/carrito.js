@@ -8,17 +8,28 @@ if (carritoJSON) {
     let fila = document.createElement('tr')
     fila.innerHTML = `
             <td>${producto.nombre}</td>
-            <td><img src="${producto.imagen}"></td>
+            <td><img class="imagenCarrito" src="${producto.imagen}"></td>
             <td>${producto.precio} €</td>
     `
 
     carritoProductos.append(fila)
 
+    let cantidadCelda = document.createElement('td')
+    let cantidad = document.createElement('input')
+    cantidad.className = 'cantidaas'
+    cantidad.type = 'number'
+
+    cantidadCelda.append(cantidad)
+    fila.append(cantidadCelda)
+
+
+    let eliminarCelda = document.createElement('td')
     let eliminar = document.createElement('button')
     eliminar.className = 'eliminar'
     eliminar.innerText = "Eliminar"
 
-    fila.append(eliminar)
+    eliminarCelda.append(eliminar)
+    fila.append(eliminarCelda)
 
     eliminar.addEventListener("click", () => {
         fila.style.display = "none"

@@ -58,3 +58,8 @@
 .tablaCarrito tbody tr:nth-child(even) {
     background-color: #7dcea0;
 }
+
+.imagenCarrito {
+    height: 70px;
+    width: 70px;
+}

@@ -18,13 +18,20 @@ productos.forEach((producto) => {
 
     catalogo.append(comprar);
 
+    let cantidad = document.createElement("input")
+    cantidad.className = 'cantidad'
+    cantidad.type = 'number'
+    cantidad.placeholder = 'Cantidad'
+
+    catalogo.append(cantidad)
+
     comprar.addEventListener('click', () => {
         carrito.push({
             id: producto.id,
             nombre: producto.nombre,
+            imagen: producto.imagen,
             precio: producto.precio,
           });
-          console.log(carrito)
           localStorage.setItem("carrito", JSON.stringify(carrito));
     })
 })
