@@ -26,13 +26,15 @@ productos.forEach((producto) => {
     catalogo.append(cantidad)
 
     comprar.addEventListener('click', () => {
-        carrito.push({
-            id: producto.id,
-            nombre: producto.nombre,
-            imagen: producto.imagen,
-            precio: producto.precio,
-          });
-          localStorage.setItem("carrito", JSON.stringify(carrito));
+      const cantidadSeleccionada = parseInt(cantidad.value);
+      carrito.push({
+        id: producto.id,
+        nombre: producto.nombre,
+        imagen: producto.imagen,
+        precio: producto.precio,
+        cantidad: cantidadSeleccionada
+      })
+      localStorage.setItem("carrito", JSON.stringify(carrito));
     })
 })
 
