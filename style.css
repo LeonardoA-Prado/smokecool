@@ -351,9 +351,15 @@ display: block;
 width: 8rem;
 height: 2rem;
 float: right;
-color: #ffffff;
-background-color: transparent;
-border: #ffffff 2px solid;
+border-radius: 20px;
+border: 1px solid #ffffff;
+background-color: #ff922b;
+color: #FFFFFF;
+font-size: 12px;
+font-weight: bold;
+letter-spacing: 1px;
+text-transform: uppercase;
+transition: transform 80ms ease-in;
 }
 
 .admin:hover {
