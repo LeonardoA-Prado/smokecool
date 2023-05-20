@@ -14,18 +14,34 @@ header {
   background-color: black;
 }
 
+@font-face {
+  font-family: 'Smoke';
+  src: url(smoke.ttf);
+}
+
 .container
 {
-  background-color: #000000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+  margin-top: 50px;
+  text-align: center;
+  backdrop-filter: blur(80px);
+}
+
+.eslogan {
+  background: none;
+  font-size: 50px;
+  font-family: 'Smoke';
 }
 
 .efecto
 {
-  display:flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  font-family: 'Smoke';
 }
 
 .efecto li
@@ -922,8 +938,4 @@ font-size: 15px;
   width: 100px;
   height: 20px;
 } 
-
-.efecto {
-  font-size: 20px;
-}
 }
