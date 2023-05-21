@@ -78,3 +78,17 @@ document.addEventListener('DOMContentLoaded', () => {
     carritoCounter();
   }
 });
+
+var originalTitle = document.title;
+
+function updateTitle() {
+  document.title = "Vuelve Aquí !";
+}
+
+function restoreTitle() {
+  document.title = originalTitle;
+}
+
+window.addEventListener("blur", updateTitle);
+
+window.addEventListener("focus", restoreTitle);
