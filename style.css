@@ -17,6 +17,19 @@ header {
   z-index: 999;
 }
 
+body::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: black;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-image: url("images/humo.jpg");
+  border-radius: 20px;
+}
+
 @font-face {
   font-family: 'Smoke';
   src: url(smoke.ttf);
