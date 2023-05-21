@@ -865,8 +865,10 @@ a:hover b {
 }
 
 .admin {
-  height: 20px;
+  z-index: 99;
+  height: 30px;
   width: 100px;
+  font: 10px;
 }
 
 .logoInicio2{
@@ -874,7 +876,7 @@ a:hover b {
 }
 
 .slide{
-  width: 29% !important;
+  width: 99% !important;
   height: 50% !important;
 }
 
@@ -975,20 +977,26 @@ font-size: 15px;
   align-items: center;
 }
 
-.admin {
-  width: 100px;
-  height: 20px;
-} 
-
 .eslogan {
   background: none;
-  font-size: 18px;
+  font-size: 15px;
+  padding-top: 10px;
   font-family: 'Smoke';
 }
 
 .efecto
 {
   font-size: 5px;
+}
+
+header{
+  width: 412px;
+  height: 80px;
+  font-size: 9.5px;
+}
+
+.slidecont{
+  width: 400px;
 }
 
 }
