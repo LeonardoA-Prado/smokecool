@@ -80,15 +80,41 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 var originalTitle = document.title;
+var alertshow = false;
+var windowChanged = false;
+var updateTitleTimeout;
 
-function updateTitle() {
-  document.title = "Vuelve Aquí !";
+function goTitle() {
+  if (!windowChanged) {
+    document.title = "¡Vuelve Aquí!";
+    windowChanged = true;
+    clearTimeout(updateTitleTimeout);
+  }
 }
 
 function restoreTitle() {
   document.title = originalTitle;
+  windowChanged = false;
+  if (window.document.hasFocus()) {
+    updateTitle();
+  }
 }
 
-window.addEventListener("blur", updateTitle);
-
+window.addEventListener("blur", goTitle);
 window.addEventListener("focus", restoreTitle);
+
+function updateTitle() {
+  if (window.document.hasFocus() && !windowChanged) {
+    document.title = alertshow ? document.title : "Bienvenido a Smokecool";
+    alertshow = !alertshow;
+  }
+
+  updateTitleTimeout = setTimeout(() => {
+    document.title = originalTitle;
+    updateTitle();
+  }, 1000);
+}
+
+updateTitle();
+
+

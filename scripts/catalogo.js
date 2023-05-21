@@ -22,6 +22,7 @@ productos.forEach((producto) => {
   catalogo.append(comprar);
 
   let cantidad = document.createElement("input")
+  cantidad.min = 0;
   cantidad.className = 'cantidad'
   cantidad.type = 'number'
   cantidad.placeholder = 'Cantidad'
