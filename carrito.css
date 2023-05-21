@@ -4,10 +4,10 @@
 }
 
 .carritoContenedor {
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 20px;   
 }
 
 .tituloCarrito {
@@ -16,15 +16,35 @@
 }
 
 .botonCompra {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto;
     justify-content: center;
     margin: 50px;
+}
+
+.formularioCarrito {
+    display: flex;
+    justify-content: center;
 }
 
 .compra {
     border-radius: 25px;
     height: 50px;
     width: 100px;
+}
+
+#comprar {
+    background-color: rgb(72, 170, 226);
+    color: antiquewhite;
+    font-weight: bold;
+    border-radius: 25px;
+    width: 70px;
+    height: 40px;
+}
+
+#comprar:hover {
+    box-shadow: 0 0 15px rgb(255, 255, 255);
+    cursor: pointer;
 }
 
 .compra:hover {

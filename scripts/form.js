@@ -15,8 +15,6 @@ form.addEventListener('submit', (event) => {
   
 });
 
-
-
 const miBoton = document.querySelector('#boton');
 const miNotificacion = document.querySelector('#noti');
 const miTitulo = document.querySelector('#notigrax');
@@ -30,7 +28,7 @@ miBoton.addEventListener('click', () => {
   if (emailInput.value === "" || subjectInput.value === "" || messageInput.value === "") {
     miTitulo.textContent = "El formato de entrada está mal";
     miTexto.textContent = "Por favor, introduce el formato correcto";
-  } 
+  }
   
   setTimeout(() => {
     miNotificacion.classList.remove('mostrar');

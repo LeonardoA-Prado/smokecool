@@ -1,14 +1,16 @@
 let carrito = []
 let tablaCatalogo = document.getElementById('catalogo')
 let cantidadCarrito = document.getElementById('cantidadCarrito')
+let notificacion = document.querySelector('#noti');
+let textoError = document.querySelector('#notigrax');
 
 productos.forEach((producto) => {
   let catalogo = document.createElement('div')
   catalogo.className = 'tarjeta'
   catalogo.innerHTML = `
-            <h2 class="nombreProducto">${producto.nombre}</h2>
-            <img class="imagenProducto" src="${producto.imagen}">
-            <h3 class="precioProducto">${producto.precio} €</h3>
+    <h2 class="nombreProducto">${producto.nombre}</h2>
+    <img class="imagenProducto" src="${producto.imagen}">
+    <h3 class="precioProducto">${producto.precio} €</h3>
     `
 
   tablaCatalogo.append(catalogo)
@@ -28,15 +30,25 @@ productos.forEach((producto) => {
 
   comprar.addEventListener('click', () => {
     const cantidadSeleccionada = parseInt(cantidad.value);
-    carrito.push({
-      id: producto.id,
-      nombre: producto.nombre,
-      imagen: producto.imagen,
-      precio: producto.precio,
-      cantidad: cantidadSeleccionada
-    })
-    localStorage.setItem("carrito", JSON.stringify(carrito));
-    carritoCounter()
+    if(isNaN(cantidadSeleccionada) || cantidadSeleccionada <= 0) {
+      textoError.textContent = 'Debes indicar una cantidad válida'
+      notificacion.classList.add('mostrar')
+
+      setTimeout(() => {
+        notificacion.classList.remove('mostrar');
+      }, 3000);
+    }
+    else {
+      carrito.push({
+        id: producto.id,
+        nombre: producto.nombre,
+        imagen: producto.imagen,
+        precio: producto.precio,
+        cantidad: cantidadSeleccionada
+      })
+      localStorage.setItem("carrito", JSON.stringify(carrito));
+      carritoCounter()
+    }
   })
 })
 

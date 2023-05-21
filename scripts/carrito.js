@@ -70,14 +70,6 @@ if (carritoJSON) {
 
   carritoProductos.append(filaPago)
 }
-else {
-  let noti = document.createElement('div')
-  noti.className = 'carritoVacio'
-  noti.innerHTML = `
-    <h1 class="compraYa">El carrito está vacío</h1>
-  `
-  carritoProductos.append(noti)
-}
 
 function updateSubtotalAndTotal() {
   total = 0;
