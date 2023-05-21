@@ -72,19 +72,15 @@
     background-color: rgb(160, 157, 157);
 }
 
-.tituloUsuario {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-}
 
-.nombreUsuario {
+
+
+.Datosusuario {
+    text-align: center;
+    
+    margin-top: 30px;
     background: none;
     color: black;
-}
-
-.usuario {
     height: 20px;
     margin-left: 15px;
     text-align: center;
@@ -92,3 +88,4 @@
 
 @media only screen and (max-width: 600px) {
 }
+

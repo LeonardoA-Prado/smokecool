@@ -58,9 +58,8 @@ if (carritoJSON) {
   `
 
   carritoProductos.append(filaPago)
-} 
-else
-{
+}
+else {
   let noti = document.createElement('div')
   noti.className = 'carritoVacio'
   noti.innerHTML = `
@@ -68,3 +67,9 @@ else
   `
   carritoProductos.append(noti)
 }
+
+
+
+
+
+
