@@ -36,7 +36,6 @@ if (carritoJSON) {
       }
     }});
 
-
     cantidadCelda.append(cantidad)
     fila.append(cantidadCelda)
 
@@ -69,6 +68,11 @@ if (carritoJSON) {
   `
 
   carritoProductos.append(filaPago)
+
+  function guardarCarrito(carrito) {
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+  }
+  guardarCarrito(carrito)
 }
 
 function updateSubtotalAndTotal() {

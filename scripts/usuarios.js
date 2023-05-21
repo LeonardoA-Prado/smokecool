@@ -18,11 +18,16 @@ if (savedData) {
   infoDiv.appendChild(messageP);
 }
 
-
 const pedidos = document.querySelector('.pedidos');
 
-const datosCarrito = JSON.parse(localStorage.getItem('carrito'));
-datosCarrito.forEach((producto) => {
+let carritoJSON = localStorage.getItem("carrito");
+let carrito = [];
+
+if (carritoJSON) {
+  carrito = JSON.parse(carritoJSON);
+}
+
+carrito.forEach((producto) => {
 
   const imagen = document.createElement('img');
   imagen.classList.add('fotoProductos')
