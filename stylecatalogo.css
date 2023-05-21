@@ -113,4 +113,12 @@ header {
     height: 10px;
     width: 10px;
   }
+
+#cantidadCarrito{
+height: 6px;
+width: 6px;
+font-size: 9px;
+
+  }
+
 }

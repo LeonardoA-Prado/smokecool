@@ -992,11 +992,18 @@ font-size: 15px;
 header{
   width: 412px;
   height: 80px;
-  font-size: 9.5px;
+  font-size: 9px;
 }
 
 .slidecont{
   width: 400px;
 }
+
+#cantidadCarrito{
+  height: 6px;
+  width: 6px;
+  font-size: 9px;
+  
+    }
 
 }
