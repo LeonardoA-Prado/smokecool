@@ -61,3 +61,22 @@ const texts = {
     const ancho = 100 / numBarras;
     barra.style.width = `${ancho}%`;
     barra.style.height = `${valor}%`;});
+
+
+
+    const carritoCounter = () => {
+      cantidadCarrito.style.display = 'flex'
+      carrito.forEach((producto) => {
+        cantidadCarrito.innerText = producto.cantidad
+      })
+      if(carrito.length === 0){
+        cantidadCarrito.style.display = 'none'
+      }
+    }
+    
+    document.addEventListener('DOMContentLoaded', () => {
+      if (localStorage.getItem('carrito')) {
+        carrito = JSON.parse(localStorage.getItem('carrito'));
+        carritoCounter();
+      }
+    });

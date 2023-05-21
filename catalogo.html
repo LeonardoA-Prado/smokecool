@@ -22,8 +22,9 @@
           <li><a href="contacto.html" data-replace="Contacto"> <b>Contacto</b> </a></li>
           <li><a href="nosotros.html" data-replace="Nosotros"> <b>Nosotros</b> </a></li>
           <li><a class="carritoLogoLink" href="carrito.html">
-                    <img class="carritoFoto" onmouseout="this.src='images/carrito.png'" src="images/carrito.png" onmouseover="this.src='images/carritonaranja.png'" src="images/carritonaranja.png">
-                </a></li>
+              <span id="cantidadCarrito" class="cantidad-Carrito"></span>
+              <img class="carritoFoto" onmouseout="this.src='images/carrito.png'" src="images/carrito.png" onmouseover="this.src='images/carritonaranja.png'" src="images/carritonaranja.png">
+          </a></li>
         </ul>
     </nav>
 </header>
@@ -42,11 +43,13 @@
   </div>
 </div>
 
-      <h2 class="titulos">Nuestros productos</h2>
-      <p class="parrafos">
-        Actualmente poseemos una amplia gama de licores y cachimbas gracias al trabajo de nuestros proveedores y al de nuestros empleados
-        <br>Nuestros clientes podrán elegir en todo momento su producto favorito sin tener que preocuparse del dinero que lleve encima,  ya que nuestros productos se acomodan económicamente a todos.
-      </p>
+<div class="introProductos">
+  <h2 class="titulos">Nuestros productos</h2>
+  <p class="parrafos">
+    Actualmente poseemos una amplia gama de licores y cachimbas gracias al trabajo de nuestros proveedores y al de nuestros empleados
+    <br>Nuestros clientes podrán elegir en todo momento su producto favorito sin tener que preocuparse del dinero que lleve encima,  ya que nuestros productos se acomodan económicamente a todos.
+  </p>
+</div>
 
   <div class="buscadorDiv"><input type="text" class="buscador" id="buscador" placeholder="Buscar..."></div>
   <div class="catalogo" id="catalogo"></div>

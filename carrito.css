@@ -12,6 +12,7 @@
 
 .tituloCarrito {
     text-align: center;
+    margin-top: 80px;
 }
 
 .botonCompra {
@@ -71,9 +72,6 @@
 .pagar {
     background-color: rgb(160, 157, 157);
 }
-
-
-
 
 .Datosusuario {
     text-align: center;

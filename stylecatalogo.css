@@ -76,6 +76,10 @@ header {
   margin-left: 5px;
 }
 
+.introProductos {
+  margin-top: 80px;
+}
+
 @media only screen and (max-width: 600px) {
   .catalogo {
     display: grid;

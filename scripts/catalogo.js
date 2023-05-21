@@ -1,55 +1,57 @@
 let carrito = []
 let tablaCatalogo = document.getElementById('catalogo')
+let cantidadCarrito = document.getElementById('cantidadCarrito')
 
 productos.forEach((producto) => {
-    let catalogo = document.createElement('div')
-    catalogo.className = 'tarjeta'
-    catalogo.innerHTML = `
+  let catalogo = document.createElement('div')
+  catalogo.className = 'tarjeta'
+  catalogo.innerHTML = `
             <h2 class="nombreProducto">${producto.nombre}</h2>
             <img class="imagenProducto" src="${producto.imagen}">
             <h3 class="precioProducto">${producto.precio} €</h3>
     `
 
-    tablaCatalogo.append(catalogo)
-    
-    let comprar = document.createElement("button")
-    comprar.className = 'comprame'
-    comprar.innerText = "Comprar";
+  tablaCatalogo.append(catalogo)
 
-    catalogo.append(comprar);
+  let comprar = document.createElement("button")
+  comprar.className = 'comprame'
+  comprar.innerText = "Comprar";
 
-    let cantidad = document.createElement("input")
-    cantidad.className = 'cantidad'
-    cantidad.type = 'number'
-    cantidad.placeholder = 'Cantidad'
+  catalogo.append(comprar);
 
-    catalogo.append(cantidad)
+  let cantidad = document.createElement("input")
+  cantidad.className = 'cantidad'
+  cantidad.type = 'number'
+  cantidad.placeholder = 'Cantidad'
 
-    comprar.addEventListener('click', () => {
-      const cantidadSeleccionada = parseInt(cantidad.value);
-      carrito.push({
-        id: producto.id,
-        nombre: producto.nombre,
-        imagen: producto.imagen,
-        precio: producto.precio,
-        cantidad: cantidadSeleccionada
-      })
-      localStorage.setItem("carrito", JSON.stringify(carrito));
+  catalogo.append(cantidad)
+
+  comprar.addEventListener('click', () => {
+    const cantidadSeleccionada = parseInt(cantidad.value);
+    carrito.push({
+      id: producto.id,
+      nombre: producto.nombre,
+      imagen: producto.imagen,
+      precio: producto.precio,
+      cantidad: cantidadSeleccionada
     })
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    carritoCounter()
+  })
 })
 
 const buscador = document.getElementById("buscador");
 
 buscador.addEventListener('input', () => {
-    let busqueda = buscador.value.toLowerCase()
-    let tarjetas = tablaCatalogo.querySelectorAll('.tarjeta')
-  
-    tarjetas.forEach((tarjeta) => {
-      let nombreProducto = tarjeta.querySelector('.nombreProducto').textContent.toLowerCase()
-      
-      if (nombreProducto.includes(busqueda)) 
-        tarjeta.style.display = 'block';
-      else 
-        tarjeta.style.display = 'none';
-    })
+  let busqueda = buscador.value.toLowerCase()
+  let tarjetas = tablaCatalogo.querySelectorAll('.tarjeta')
+
+  tarjetas.forEach((tarjeta) => {
+    let nombreProducto = tarjeta.querySelector('.nombreProducto').textContent.toLowerCase()
+
+    if (nombreProducto.includes(busqueda))
+      tarjeta.style.display = 'block';
+    else
+      tarjeta.style.display = 'none';
   })
+})
