@@ -1,4 +1,4 @@
-let carritoJSON = localStorage.getItem("carrito");
+let carritoJSON = sessionStorage.getItem("carrito");
 let carritoProductos = document.getElementById('carrito')
 let total = 0;
 
@@ -24,14 +24,14 @@ if (carritoJSON) {
     cantidad.addEventListener('input', () => {
       const nuevaCantidad = parseInt(cantidad.value);
       producto.cantidad = nuevaCantidad;
-      localStorage.setItem("carrito", JSON.stringify(carrito));
+      sessionStorage.setItem("carrito", JSON.stringify(carrito));
       updateSubtotalAndTotal();
       
       if(nuevaCantidad === 0){
         const index = carrito.findIndex(item => item.id === producto.id);
         if (index !== -1) {
         carrito.splice(index, 1)
-        localStorage.setItem("carrito", JSON.stringify(carrito))
+        sessionStorage.setItem("carrito", JSON.stringify(carrito))
         fila.remove()
       }
     }});
@@ -52,7 +52,7 @@ if (carritoJSON) {
       const index = carrito.findIndex(item => item.id === producto.id);
       if (index !== -1) {
         carrito.splice(index, 1)
-        localStorage.setItem("carrito", JSON.stringify(carrito))
+        sessionStorage.setItem("carrito", JSON.stringify(carrito))
         fila.remove()
       }
     })
@@ -87,7 +87,3 @@ function updateSubtotalAndTotal() {
   const filaPago = carritoProductos.querySelector('tr:last-child');
   filaPago.querySelector('.precio').innerHTML = `<b>${total.toFixed(2)} €</b>`;
 }
-
-
-
-

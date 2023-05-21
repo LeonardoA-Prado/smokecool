@@ -73,8 +73,8 @@ function carritoCounter(){
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  if (localStorage.getItem('carrito')) {
-    carrito = JSON.parse(localStorage.getItem('carrito'));
+  if (sessionStorage.getItem('carrito')) {
+    carrito = JSON.parse(sessionStorage.getItem('carrito'));
     carritoCounter();
   }
 });

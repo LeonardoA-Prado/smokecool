@@ -47,7 +47,7 @@ productos.forEach((producto) => {
         precio: producto.precio,
         cantidad: cantidadSeleccionada
       })
-      localStorage.setItem("carrito", JSON.stringify(carrito));
+      sessionStorage.setItem("carrito", JSON.stringify(carrito));
       carritoCounter()
     }
   })
