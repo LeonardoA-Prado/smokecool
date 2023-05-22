@@ -1085,7 +1085,7 @@ header{
 /* smoke */
 .cloud {
   position: absolute;
-  width: 150px;
+  width: 140px;
   height: 40px;
   background: #a1a1a1b6;
   border-radius: 100px 255px 63px 50px / 75px 75px 8px 8px;
