@@ -3,6 +3,7 @@ const emailInput = document.querySelector('#email');
 const subjectInput = document.querySelector('#subject');
 const messageInput = document.querySelector('#message');
 
+var formArray = [];
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   
@@ -11,7 +12,8 @@ form.addEventListener('submit', (event) => {
     subject: subjectInput.value,
     message: messageInput.value,
   };
-  localStorage.setItem('formData', JSON.stringify(formData));
+  formArray.push(formData);
+  localStorage.setItem('formData', JSON.stringify(formArray));
   
 });
 

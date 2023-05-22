@@ -1,6 +1,7 @@
 const infoDiv = document.querySelector('.informacion');
 
 const savedData = JSON.parse(localStorage.getItem('formData'));
+
 if (savedData) {
   const emailP = document.createElement('p');
   emailP.classList.add('parrafos');
@@ -16,6 +17,20 @@ if (savedData) {
   messageP.classList.add('parrafos');
   messageP.textContent = `Mensaje: ${savedData.message}`;
   infoDiv.appendChild(messageP);
+}
+
+const borrarMensajes = document.getElementById('borrar');
+borrarMensajes.addEventListener('click', borrarDatosForm);
+
+function borrarDatosForm(){
+  const confirmacion = confirm('¿Estás seguro de que deseas borrar los datos?');
+  if (confirmacion){
+      localStorage.removeItem('formData');
+      alert('Los datos se han borrado exitosamente.');
+      location.reload();
+  } else {
+    alert('Los datos no se han borrado.');
+  }
 }
 
 const pedidos = document.querySelector('.pedidos');
