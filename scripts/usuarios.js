@@ -1,37 +1,61 @@
 const infoDiv = document.querySelector('.informacion');
-
 const savedData = JSON.parse(localStorage.getItem('formData'));
+const mensajesGuardados = savedData || [];
 
-if (savedData) {
-  const emailP = document.createElement('p');
-  emailP.classList.add('parrafos');
-  emailP.textContent = `Email: ${savedData.email}`;
-  infoDiv.appendChild(emailP);
+renderizarMensajes();
 
-  const subjectP = document.createElement('p');
-  subjectP.classList.add('parrafos');
-  subjectP.textContent = `Asunto: ${savedData.subject}`;
-  infoDiv.appendChild(subjectP);
+function renderizarMensajes() {
+  mensajesGuardados.forEach((mensaje, index) => {
+    const mensajeDiv = document.createElement('div');
 
-  const messageP = document.createElement('p');
-  messageP.classList.add('parrafos');
-  messageP.textContent = `Mensaje: ${savedData.message}`;
-  infoDiv.appendChild(messageP);
+    const emailP = document.createElement('p');
+    emailP.classList.add('parrafos');
+    emailP.textContent = `Email: ${mensaje.email}`;
+    mensajeDiv.appendChild(emailP);
+
+    const subjectP = document.createElement('p');
+    subjectP.classList.add('parrafos');
+    subjectP.textContent = `Asunto: ${mensaje.subject}`;
+    mensajeDiv.appendChild(subjectP);
+
+    const messageP = document.createElement('p');
+    messageP.classList.add('parrafos');
+    messageP.textContent = `Mensaje: ${mensaje.message}`;
+    mensajeDiv.appendChild(messageP);
+
+    const borrarBtn = document.createElement('button');
+    borrarBtn.textContent = 'Borrar';
+    borrarBtn.addEventListener('click', () => {
+      borrarMensaje(index);
+    });
+    mensajeDiv.appendChild(borrarBtn);
+
+    infoDiv.appendChild(mensajeDiv);
+  });
+}
+
+function borrarMensaje(index) {
+  mensajesGuardados.splice(index, 1);
+  localStorage.setItem('formData', JSON.stringify(mensajesGuardados));
+  infoDiv.innerHTML = '';
+  renderizarMensajes();
 }
 
 const borrarMensajes = document.getElementById('borrar');
 borrarMensajes.addEventListener('click', borrarDatosForm);
 
-function borrarDatosForm(){
+function borrarDatosForm() {
   const confirmacion = confirm('¿Estás seguro de que deseas borrar los datos?');
-  if (confirmacion){
-      localStorage.removeItem('formData');
-      alert('Los datos se han borrado exitosamente.');
-      location.reload();
+  if (confirmacion) {
+    localStorage.removeItem('formData');
+    mensajesGuardados.length = 0; // Vaciar el array
+    infoDiv.innerHTML = ''; // Limpiar el contenido del div
+    alert('Los datos se han borrado exitosamente.');
   } else {
     alert('Los datos no se han borrado.');
   }
 }
+
 
 const pedidos = document.querySelector('.pedidos');
 

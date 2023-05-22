@@ -3,10 +3,11 @@ const emailInput = document.querySelector('#email');
 const subjectInput = document.querySelector('#subject');
 const messageInput = document.querySelector('#message');
 
-var formArray = [];
+let formArray = JSON.parse(localStorage.getItem('formData')) || [];
+
 form.addEventListener('submit', (event) => {
   event.preventDefault();
-  
+
   const formData = {
     email: emailInput.value,
     subject: subjectInput.value,
@@ -14,8 +15,8 @@ form.addEventListener('submit', (event) => {
   };
   formArray.push(formData);
   localStorage.setItem('formData', JSON.stringify(formArray));
-  
 });
+
 
 const miBoton = document.querySelector('#boton');
 const miNotificacion = document.querySelector('#noti');
