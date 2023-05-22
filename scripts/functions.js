@@ -62,15 +62,21 @@ barras.forEach((barra) => {
   barra.style.height = `${valor}%`;
 });
 
-function carritoCounter(){
-  cantidadCarrito.style.display = 'flex'
+function carritoCounter() {
+  cantidadCarrito.style.display = 'flex';
+  let totalCantidad = 0; // Variable para almacenar la suma de las cantidades
+
   carrito.forEach((producto) => {
-    cantidadCarrito.innerText = producto.cantidad
-  })
-  if (carrito.length === 0) {
-    cantidadCarrito.style.display = 'none'
+    totalCantidad += producto.cantidad; // Suma la cantidad de cada producto
+  });
+
+  cantidadCarrito.innerText = totalCantidad; // Actualiza el texto con la suma total
+
+  if (totalCantidad === 0) {
+    cantidadCarrito.style.display = 'none';
   }
 }
+
 
 document.addEventListener('DOMContentLoaded', () => {
   if (sessionStorage.getItem('carrito')) {
