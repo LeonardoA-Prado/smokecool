@@ -1249,7 +1249,7 @@ left: 9%;
 bottom: 8%;
 -webkit-transform: scale(1.6);
     transform: scale(1.6);
-left: 92%;
+left: 85%;
 -webkit-animation: cloud 20s infinite;
     animation: cloud 20s infinite;
 }
@@ -1257,7 +1257,7 @@ left: 92%;
 bottom: 37%;
 -webkit-transform: scale(1.6);
     transform: scale(1.6);
-left: 96%;
+left: 81%;
 -webkit-animation: cloud 22s infinite;
     animation: cloud 22s infinite;
 }
@@ -1265,7 +1265,7 @@ left: 96%;
 bottom: 29%;
 -webkit-transform: scale(1.8);
     transform: scale(1.8);
-left: 95%;
+left: 82%;
 -webkit-animation: cloud 24s infinite;
     animation: cloud 24s infinite;
 }
@@ -1273,7 +1273,7 @@ left: 95%;
 bottom: 34%;
 -webkit-transform: scale(2.1);
     transform: scale(2.1);
-left: 93%;
+left: 85%;
 -webkit-animation: cloud 26s infinite;
     animation: cloud 26s infinite;
 }
@@ -1281,7 +1281,7 @@ left: 93%;
 bottom: 8%;
 -webkit-transform: scale(2.5);
     transform: scale(2.5);
-left: 90%;
+left: 82%;
 -webkit-animation: cloud 28s infinite;
     animation: cloud 28s infinite;
 }
@@ -1289,7 +1289,7 @@ left: 90%;
 bottom: 36%;
 -webkit-transform: scale(2.5);
     transform: scale(2.5);
-left: 93%;
+left: 83%;
 -webkit-animation: cloud 30s infinite;
     animation: cloud 30s infinite;
 }
@@ -1297,7 +1297,7 @@ left: 93%;
 bottom: 36%;
 -webkit-transform: scale(1.2);
     transform: scale(1.2);
-left: 94%;
+left: 81%;
 -webkit-animation: cloud 32s infinite;
     animation: cloud 32s infinite;
 }
@@ -1305,7 +1305,7 @@ left: 94%;
 bottom: 14%;
 -webkit-transform: scale(1.1);
     transform: scale(1.1);
-left: 90%;
+left: 84%;
 -webkit-animation: cloud 34s infinite;
     animation: cloud 34s infinite;
 }
@@ -1313,7 +1313,7 @@ left: 90%;
 bottom: 6%;
 -webkit-transform: scale(2);
     transform: scale(2);
-left: 91%;
+left: 83%;
 -webkit-animation: cloud 36s infinite;
     animation: cloud 36s infinite;
 }
@@ -1321,7 +1321,7 @@ left: 91%;
 bottom: 10%;
 -webkit-transform: scale(2.3);
     transform: scale(2.3);
-left: 93%;
+left: 86%;
 -webkit-animation: cloud 38s infinite;
     animation: cloud 38s infinite;
 }
@@ -1329,7 +1329,7 @@ left: 93%;
 bottom: 16%;
 -webkit-transform: scale(1.6);
   transform: scale(1.6);
-left: 89%;
+left: 85%;
 -webkit-animation: cloud 40s infinite;
   animation: cloud 40s infinite;
 }
@@ -1337,7 +1337,7 @@ left: 89%;
 bottom: 16%;
 -webkit-transform: scale(1.6);
   transform: scale(1.6);
-left: 88%;
+left: 83%;
 -webkit-animation: cloud 42s infinite;
   animation: cloud 42s infinite;
 }
@@ -1345,7 +1345,7 @@ left: 88%;
 bottom: 16%;
 -webkit-transform: scale(1.6);
   transform: scale(1.6);
-left: 96%;
+left: 84%;
 -webkit-animation: cloud 44s infinite;
   animation: cloud 44s infinite;
 }
@@ -1353,7 +1353,7 @@ left: 96%;
 bottom: 16%;
 -webkit-transform: scale(1.6);
   transform: scale(1.6);
-left: 94%;
+left: 80%;
 -webkit-animation: cloud 46s infinite;
   animation: cloud 46s infinite;
 }
@@ -1361,7 +1361,7 @@ left: 94%;
 bottom: 0%;
 -webkit-transform: scale(1.6);
   transform: scale(1.6);
-left: 95%;
+left: 85%;
 -webkit-animation: cloud 48s infinite;
   animation: cloud 48s infinite;
 }
@@ -1372,13 +1372,11 @@ height: 50px;
 background: #a3a3a3bd;
 border-radius: 50%;
 position: absolute;
-left: 20px;
 bottom: 0%;
 display: block;
 }
 .cloud:before {
-bottom: 0%;
-left: 50px;
+bottom: -520px;
 width: 70px;
 height: 70px;
 }
