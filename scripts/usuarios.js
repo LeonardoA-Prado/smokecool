@@ -7,38 +7,50 @@ renderizarMensajes();
 function renderizarMensajes() {
   mensajesGuardados.forEach((mensaje, index) => {
     const mensajeDiv = document.createElement('div');
+    mensajeDiv.className = 'mensajeDiv'
 
     const emailP = document.createElement('p');
-    emailP.classList.add('parrafos');
+    emailP.className = 'emailP'
     emailP.textContent = `Email: ${mensaje.email}`;
     mensajeDiv.appendChild(emailP);
 
     const subjectP = document.createElement('p');
-    subjectP.classList.add('parrafos');
+    subjectP.className = 'subjectP'
     subjectP.textContent = `Asunto: ${mensaje.subject}`;
     mensajeDiv.appendChild(subjectP);
 
     const messageP = document.createElement('p');
-    messageP.classList.add('parrafos');
+    messageP.className = 'messageP'
     messageP.textContent = `Mensaje: ${mensaje.message}`;
     mensajeDiv.appendChild(messageP);
 
+    const divBoton = document.createElement('div')
+    divBoton.className = 'divBoton'
     const borrarBtn = document.createElement('button');
     borrarBtn.textContent = 'Borrar';
+    borrarBtn.className = 'borrarBtn'
     borrarBtn.addEventListener('click', () => {
       borrarMensaje(index);
     });
-    mensajeDiv.appendChild(borrarBtn);
+    divBoton.appendChild(borrarBtn)
+    mensajeDiv.appendChild(divBoton);
 
     infoDiv.appendChild(mensajeDiv);
   });
 }
 
 function borrarMensaje(index) {
-  mensajesGuardados.splice(index, 1);
-  localStorage.setItem('formData', JSON.stringify(mensajesGuardados));
-  infoDiv.innerHTML = '';
-  renderizarMensajes();
+  const confirmacion = confirm('¿Estás seguro de que deseas borrar los datos?');
+  if (confirmacion){
+    mensajesGuardados.splice(index, 1);
+    localStorage.setItem('formData', JSON.stringify(mensajesGuardados));
+    infoDiv.innerHTML = '';
+    renderizarMensajes();
+    alert('Los datos se han borrado exitosamente.');
+  }
+  else {
+    alert('Los datos no se han borrado.');
+  }
 }
 
 const borrarMensajes = document.getElementById('borrar');
@@ -48,8 +60,8 @@ function borrarDatosForm() {
   const confirmacion = confirm('¿Estás seguro de que deseas borrar los datos?');
   if (confirmacion) {
     localStorage.removeItem('formData');
-    mensajesGuardados.length = 0; // Vaciar el array
-    infoDiv.innerHTML = ''; // Limpiar el contenido del div
+    mensajesGuardados.length = 0;
+    infoDiv.innerHTML = '';
     alert('Los datos se han borrado exitosamente.');
   } else {
     alert('Los datos no se han borrado.');

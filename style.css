@@ -751,6 +751,73 @@ background:none
   margin-left: 75%;
 }
 
+#borrar {
+  height: 50px;
+  background-color:rgb(255, 0, 0);
+  color: white;
+  border-radius: 25px;
+}
+
+#borrar:hover {
+  box-shadow: rgba(255, 255, 255) 0px 6px 6px;
+  font-weight: bold;
+}
+
+.informacion {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+}
+
+.contenedorFormulario {
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
+}
+
+.mensajeDiv {
+  border: #000000 1px solid;
+  padding: 5px;
+  display: grid;
+  justify-content: center;
+  text-align: left;
+  background-color: #000000;
+  margin-top: 10px;
+  margin-left: 30px;
+  border-radius: 10px;
+  width: 400px;
+  font-weight: bold;
+}
+
+.divBoton {
+  display: flex;
+  justify-content: center;
+}
+
+.borrarBtn {
+  width: 100px;
+  background-color:rgb(255, 0, 0);
+  color: white;
+  border-radius: 10px;
+}
+
+.borrarBtn:hover {
+  box-shadow: rgba(255, 255, 255) 0px 2px 5px;
+  font-weight: bold;
+}
+
+.emailP {
+  background: none;
+}
+
+.subjectP {
+  background: none;
+}
+
+.messageP {
+  background: none;
+}
+
 @media (max-width: 768px) {
   header {
     height: 50px;
