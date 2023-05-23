@@ -94,8 +94,6 @@
 }
 
 .Datosusuario {
-    text-align: center;
-    
     margin-top: 30px;
     background: none;
     color: black;
@@ -104,6 +102,39 @@
     text-align: center;
 }
 
-@media only screen and (max-width: 600px) {
+#comprado{
+    border-radius: 20px;
+border: 1px solid #ffffff;
+background-color: #ff922b;
+color: #FFFFFF;
+font-size: 15px;
+font-weight: bold;
+letter-spacing: 1px;
+text-transform: uppercase;
 }
 
+.formularioCarrito{
+    margin-top: 20px;
+}
+
+#usuarioCarrito{
+    background-color: rgb(160, 157, 157);
+    border: solid 1px black;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+.cabezera{
+    font-size: 10px;
+}
+
+.pagar{
+    margin-bottom: 20px;
+}
+
+.precio{
+    margin-bottom: 20px;
+}
+
+}
