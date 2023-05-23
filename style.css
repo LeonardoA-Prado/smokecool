@@ -1442,32 +1442,6 @@ header{
   width: 6px;
   font-size: 9px;
   
-<<<<<<< HEAD
-    }
-
-    .cabeceras{
-      font-size: 15px;
-    }
-
-    .pedidosStyle{
-      width: 330px;
-    }
-
-    #tituloUsuarios{
-      margin-top: 100px;
-    }
-
-    .informacion{
-      grid-template-columns: auto;
-      width:80%;
-      margin: auto;
-    }
-
-    .mensajeDiv{
-      width: 95%;
-      margin-left: 0;
-    }
-=======
 }
 .cloud:nth-child(1) {
   bottom: 100%;
@@ -1708,5 +1682,27 @@ bottom: 3%;
   -webkit-animation: cloud 48s infinite;
     animation: cloud 48s infinite;
   }
->>>>>>> 558379f0aca8c8d786b1c0f9406ebf48492375f0
+
+  .cabeceras{
+    font-size: 15px;
+  }
+
+  .pedidosStyle{
+    width: 330px;
+  }
+
+  #tituloUsuarios{
+    margin-top: 100px;
+  }
+
+  .informacion{
+    grid-template-columns: auto;
+    width:80%;
+    margin: auto;
+  }
+
+  .mensajeDiv{
+    width: 95%;
+    margin-left: 0;
+  }
 }
