@@ -8,7 +8,7 @@ if (carritoJSON) {
   carrito.forEach((producto) => {
     let fila = document.createElement('tr')
     fila.innerHTML = `
-      <td>${producto.nombre}</td>
+      <td class="cabeceras">${producto.nombre}</td>
       <td><img class="imagenCarrito" src="${producto.imagen}"></td>
       <td>${producto.precio} €</td>
     `

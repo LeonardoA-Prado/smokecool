@@ -1224,7 +1224,7 @@ top: 40%;
 
   .carritoFoto {
     height: 25px;
-    width: 30px;
+    width: 25px;
   }
 
   .fotoProductos{
@@ -1681,5 +1681,28 @@ bottom: 3%;
     left: 4%;
   -webkit-animation: cloud 48s infinite;
     animation: cloud 48s infinite;
+  }
+
+  .cabeceras{
+    font-size: 15px;
+  }
+
+  .pedidosStyle{
+    width: 330px;
+  }
+
+  #tituloUsuarios{
+    margin-top: 100px;
+  }
+
+  .informacion{
+    grid-template-columns: auto;
+    width:80%;
+    margin: auto;
+  }
+
+  .mensajeDiv{
+    width: 95%;
+    margin-left: 0;
   }
 }
