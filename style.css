@@ -847,15 +847,19 @@ background:none
 }
 
 /* smoke */
+.clouds{
+  max-width: 10px;
+}
 .cloud {
   position: absolute;
-  width: 140px;
+  width: 50%;
+  max-width: 160px;
   height: 40px;
   background: #a1a1a1b6;
   border-radius: 100px 255px 63px 50px / 75px 75px 8px 8px;
   top: 10%;
   -webkit-filter: blur(20px);
-          filter: blur(20px);
+  filter: blur(20px);
   z-index: -1;
   animation: cloud 32s infinite;
 }
@@ -1438,6 +1442,7 @@ header{
   width: 6px;
   font-size: 9px;
   
+<<<<<<< HEAD
     }
 
     .cabeceras{
@@ -1462,4 +1467,246 @@ header{
       width: 95%;
       margin-left: 0;
     }
+=======
+}
+.cloud:nth-child(1) {
+  bottom: 100%;
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  left: 4%;
+  -webkit-animation: cloud 20s infinite;
+  animation: cloud 20s infinite;
+}
+.cloud:nth-child(2) {
+bottom: 200%;
+-webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  left: 2%;
+  -webkit-animation: cloud 22s infinite;
+  animation: cloud 22s infinite;
+}
+.cloud:nth-child(3) {
+bottom: 3%;
+-webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  left: 8%;
+  -webkit-animation: cloud 24s infinite;
+  animation: cloud 24s infinite;
+}
+.cloud:nth-child(4) {
+bottom: 3%;
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  left: 10%;
+  -webkit-animation: cloud 26s infinite;
+  animation: cloud 26s infinite;
+}
+  .cloud:nth-child(5) {
+  bottom: 1%;
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  left: 5%;
+  -webkit-animation: cloud 28s infinite;
+  animation: cloud 28s infinite;
+}
+  .cloud:nth-child(6) {
+  bottom: 8%;
+  -webkit-transform: scale(0.5);
+      transform: scale(0.5);
+      left: 4%;
+  -webkit-animation: cloud 30s infinite;
+      animation: cloud 30s infinite;
+  }
+  .cloud:nth-child(7) {
+  bottom: 9%;
+  -webkit-transform: scale(0.5);
+      transform: scale(0.5);
+  left: 11%;
+  -webkit-animation: cloud 32s infinite;
+      animation: cloud 32s infinite;
+  }
+  .cloud:nth-child(8) {
+  bottom: 12%;
+  -webkit-transform: scale(0.5);
+      transform: scale(0.5);
+  left: 2%;
+  -webkit-animation: cloud 34s infinite;
+      animation: cloud 34s infinite;
+  }
+  .cloud:nth-child(9) {
+  bottom: 21%;
+  -webkit-transform: scale(0.5);
+      transform: scale(0.5);
+  left: 7%;
+  -webkit-animation: cloud 36s infinite;
+      animation: cloud 36s infinite;
+  }
+  .cloud:nth-child(10) {
+  bottom: 16%;
+  -webkit-transform: scale(0.5);
+      transform: scale(0.5);
+  left: 10%;
+  -webkit-animation: cloud 38s infinite;
+      animation: cloud 38s infinite;
+  }
+  .cloud:nth-child(11) {
+  bottom: 16%;
+  -webkit-transform: scale(0.5);
+      transform: scale(0.5);
+  left: 1%;
+  -webkit-animation: cloud 40s infinite;
+      animation: cloud 40s infinite;
+  }
+  .cloud:nth-child(12) {
+  bottom: 16%;
+  -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  left: 3%;
+  -webkit-animation: cloud 42s infinite;
+    animation: cloud 42s infinite;
+  }
+  .cloud:nth-child(13) {
+  bottom: 16%;
+  -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  left: 11%;
+  -webkit-animation: cloud 44s infinite;
+    animation: cloud 44s infinite;
+  }.cloud:nth-child(14) {
+  bottom: 16%;
+  -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  left: 7%;
+  -webkit-animation: cloud 46s infinite;
+    animation: cloud 46s infinite;
+  }
+  .cloud:nth-child(15) {
+  bottom: 16%;
+  -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  left: 9%;
+  -webkit-animation: cloud 48s infinite;
+    animation: cloud 48s infinite;
+  }
+  .cloud:nth-child(16) {
+  bottom: 8%;
+  -webkit-transform: scale(0.5);
+      transform: scale(0.5);
+      left: 4%;
+  -webkit-animation: cloud 20s infinite;
+      animation: cloud 20s infinite;
+  }
+  .cloud:nth-child(17) {
+  bottom: 37%;
+  -webkit-transform: scale(0.5);
+      transform: scale(0.5);
+      left: 4%;
+  -webkit-animation: cloud 22s infinite;
+      animation: cloud 22s infinite;
+  }
+  .cloud:nth-child(18) {
+  bottom: 29%;
+  -webkit-transform: scale(0.5);
+      transform: scale(0.5);
+      left: 4%;
+  -webkit-animation: cloud 24s infinite;
+      animation: cloud 24s infinite;
+  }
+  .cloud:nth-child(19) {
+  bottom: 34%;
+  -webkit-transform: scale(0.5);
+      transform: scale(0.5);
+      left: 4%;
+  -webkit-animation: cloud 26s infinite;
+      animation: cloud 26s infinite;
+  }
+  .cloud:nth-child(20) {
+  bottom: 8%;
+  -webkit-transform: scale(0.5);
+      transform: scale(0.5);
+      left: 4%;
+  -webkit-animation: cloud 28s infinite;
+      animation: cloud 28s infinite;
+  }
+  .cloud:nth-child(21) {
+  bottom: 36%;
+  -webkit-transform: scale(0.5);
+      transform: scale(0.5);
+      left: 4%;
+  -webkit-animation: cloud 30s infinite;
+      animation: cloud 30s infinite;
+  }
+  .cloud:nth-child(22) {
+  bottom: 36%;
+  -webkit-transform: scale(0.5);
+      transform: scale(0.5);
+      left: 4%;
+  -webkit-animation: cloud 32s infinite;
+      animation: cloud 32s infinite;
+  }
+  .cloud:nth-child(23) {
+  bottom: 14%;
+  -webkit-transform: scale(0.5);
+      transform: scale(0.5);
+      left: 4%;
+  -webkit-animation: cloud 34s infinite;
+      animation: cloud 34s infinite;
+  }
+  .cloud:nth-child(24) {
+  bottom: 6%;
+  -webkit-transform: scale(0.5);
+      transform: scale(0.5);
+      left: 4%;
+  -webkit-animation: cloud 36s infinite;
+      animation: cloud 36s infinite;
+  }
+  .cloud:nth-child(25) {
+  bottom: 10%;
+  -webkit-transform: scale(0.5);
+      transform: scale(0.5);
+  left: 4%;
+  -webkit-animation: cloud 38s infinite;
+      animation: cloud 38s infinite;
+  }
+  .cloud:nth-child(26) {
+  bottom: 16%;
+  -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    left: 4%;
+  -webkit-animation: cloud 40s infinite;
+    animation: cloud 40s infinite;
+  }
+  .cloud:nth-child(27) {
+  bottom: 16%;
+  -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    left: 4%;
+  -webkit-animation: cloud 42s infinite;
+    animation: cloud 42s infinite;
+  }
+  .cloud:nth-child(28) {
+  bottom: 16%;
+  -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    left: 4%;
+  -webkit-animation: cloud 44s infinite;
+    animation: cloud 44s infinite;
+  }
+  .cloud:nth-child(29) {
+  bottom: 16%;
+  -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    left: 4%;
+  -webkit-animation: cloud 46s infinite;
+    animation: cloud 46s infinite;
+  }
+  .cloud:nth-child(30) {
+  bottom: 0%;
+  -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    left: 4%;
+  -webkit-animation: cloud 48s infinite;
+    animation: cloud 48s infinite;
+  }
+>>>>>>> 558379f0aca8c8d786b1c0f9406ebf48492375f0
 }
