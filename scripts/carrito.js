@@ -94,8 +94,17 @@ function updateSubtotalAndTotal() {
 
 const usuario = document.getElementById('nombre');
 const comprado = document.getElementById('comprado');
-comprado.addEventListener("click", () => {
+comprado.addEventListener("click", function() {
+  const usuarioSaved = usuario.value
   
-  localStorage.setItem("datosComprados", JSON.stringify(usuario.value));
-  localStorage.setItem('datosComprados',JSON.stringify(carrito));
+  const carritoGuardado = localStorage.getItem('carrito');
+
+  const datosComprasGuardado = {
+    usuarioSaved: usuarioSaved,
+    carrito: carrito
+  };
+
+  localStorage.setItem('ComprasRealizadas', JSON.stringify(datosComprasGuardado));
+
+
 });
