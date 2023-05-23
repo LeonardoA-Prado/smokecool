@@ -91,3 +91,8 @@ function updateSubtotalAndTotal() {
   const filaPago = carritoProductos.querySelector('tr:last-child');
   filaPago.querySelector('.precio').innerHTML = `<b>${total.toFixed(2)} €</b>`;
 }
+
+const usuario = document.getElementById('nombre');
+usuario.addEventListener("change", () => {
+  localStorage.setItem("nombre", usuario.value);
+});

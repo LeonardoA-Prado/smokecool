@@ -68,17 +68,24 @@ function borrarDatosForm() {
   }
 }
 
+const usuarioGuardado = localStorage.getItem("nombre");
 
 const pedidos = document.querySelector('.pedidos');
 
+
 let carritoJSON = localStorage.getItem("carrito");
+
 let carrito = [];
 
 if (carritoJSON) {
   carrito = JSON.parse(carritoJSON);
+  
 }
 
 carrito.forEach((producto) => {
+  const usuario = document.createElement('p');
+  usuario.textContent = usuarioGuardado;
+  pedidos.appendChild(usuario);
 
   const imagen = document.createElement('img');
   imagen.classList.add('fotoProductos')
@@ -101,6 +108,10 @@ carrito.forEach((producto) => {
   cantidad.textContent = `Cantidad: ${producto.cantidad}`;
   pedidos.appendChild(cantidad);
 });
+
+
+
+
   
 
 
