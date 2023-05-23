@@ -41,7 +41,7 @@ function renderizarMensajes() {
 
 function borrarMensaje(index) {
   const confirmacion = confirm('¿Estás seguro de que deseas borrar los datos?');
-  if (confirmacion){
+  if (confirmacion) {
     mensajesGuardados.splice(index, 1);
     localStorage.setItem('formData', JSON.stringify(mensajesGuardados));
     infoDiv.innerHTML = '';
@@ -74,20 +74,56 @@ const pedidos = document.querySelector('.pedidos');
 
 let carritoJSON = localStorage.getItem("carrito");
 
-let datosCompradosGuardados = localStorage.getItem('datosComprados');
+let datosCompradosGuardados = localStorage.getItem('ComprasRealizadas');
 
 let bolsa = [];
-
-
 let carrito = [];
 
 if (carritoJSON) {
   carrito = JSON.parse(carritoJSON);
-  
+  console.log("Hay cosas");
 }
 
+if (datosCompradosGuardados) {
+  bolsa = JSON.parse(datosCompradosGuardados);
+  console.log("Hay cosas aqui");
+
+}
+
+  if (bolsa) {
+    var usuarioElemento = document.createElement('p');
+    
+    usuarioElemento.textContent = 'Usuario: ' + bolsa.usuario;
+    pedidos.appendChild(usuarioElemento);
+
+    bolsa.carrito.forEach(function (producto) {
+      const id = document.createElement('p');
+      id.textContent = `ID: ${producto.id}`;
+      pedidos.appendChild(id);
+
+      const imagen = document.createElement('img');
+      imagen.src = producto.imagen;
+      pedidos.appendChild(imagen);
+
+      const nombreProducto = document.createElement('p');
+      nombreProducto.textContent = `Nombre del producto: ${producto.nombre}`;
+      pedidos.appendChild(nombreProducto);
+
+      const precio = document.createElement('p');
+      precio.textContent = `Precio: ${producto.precio}`;
+      pedidos.appendChild(precio);
+
+      const cantidad = document.createElement('p');
+      cantidad.textContent = `Cantidad: ${producto.cantidad}`;
+      pedidos.appendChild(cantidad);
+    });
+  } else {
+    console.log("No hay datos almacenados en 'bolsa'");
+  }
 
 
+
+/* 
 carrito.forEach((producto) => {
   const usuario = document.createElement('p');
   usuario.textContent = usuarioGuardado;
@@ -113,12 +149,12 @@ carrito.forEach((producto) => {
   const cantidad = document.createElement('p');
   cantidad.textContent = `Cantidad: ${producto.cantidad}`;
   pedidos.appendChild(cantidad);
-});
+}); */
 
 
 
 
-  
+
 
 
 
