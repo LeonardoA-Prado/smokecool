@@ -590,6 +590,8 @@ transform: scale(1.1);
 .parrafos{
   font-size: 25px;
   margin-top: 0;
+
+  background-color: #000000;
 }
 
 #grafico {
