@@ -74,35 +74,39 @@ const pedidos = document.querySelector('.pedidos');
 
 let carritoJSON = localStorage.getItem("carrito");
 
-let datosCompradosGuardados = localStorage.getItem('ComprasRealizadas');
+let datosCompradosGuardados = JSON.parse(localStorage.getItem('ComprasRealizadas'));
+let guardarDatosComprados = datosCompradosGuardados || [];
 
-let bolsa = [];
-let carrito = [];
-
+/* let carrito = [];
 if (carritoJSON) {
   carrito = JSON.parse(carritoJSON);
   console.log("Hay cosas");
 }
+ */
 
+/* let bolsa = [];
 if (datosCompradosGuardados) {
-  bolsa = JSON.parse(datosCompradosGuardados);
+  bolsa = datosCompradosGuardados;
   console.log("Hay cosas aqui");
 
-}
-
-  if (bolsa) {
-    var usuarioElemento = document.createElement('p');
+} */
+renderizarPedidos();
+function renderizarPedidos(){
+  pedidos.className = 'pedidosStyle';
     
-    usuarioElemento.textContent = 'Usuario: ' + bolsa.usuario;
-    pedidos.appendChild(usuarioElemento);
 
-    bolsa.carrito.forEach(function (producto) {
+    guardarDatosComprados.carrito.forEach(function (producto, cancelar) {
+      var usuarioElemento = document.createElement('p');
+    
+    usuarioElemento.textContent = 'Usuario: ' + guardarDatosComprados.usuario;
+    pedidos.appendChild(usuarioElemento);
       const id = document.createElement('p');
       id.textContent = `ID: ${producto.id}`;
       pedidos.appendChild(id);
 
       const imagen = document.createElement('img');
       imagen.src = producto.imagen;
+      imagen.className = 'pedidoImagen';
       pedidos.appendChild(imagen);
 
       const nombreProducto = document.createElement('p');
@@ -116,11 +120,35 @@ if (datosCompradosGuardados) {
       const cantidad = document.createElement('p');
       cantidad.textContent = `Cantidad: ${producto.cantidad}`;
       pedidos.appendChild(cantidad);
-    });
-  } else {
-    console.log("No hay datos almacenados en 'bolsa'");
-  }
 
+      const divEliminar = document.createElement('div')
+      divEliminar.className = 'divBoton';
+      const cancelarBtn = document.createElement('button');
+      cancelarBtn.textContent = 'Cancelar';
+      cancelarBtn.className = 'borrarBtn';
+      cancelarBtn.addEventListener('click', () =>{
+        cancelarPedido(cancelar);
+      });
+      divEliminar.appendChild(cancelarBtn);   
+      pedidos.appendChild(divEliminar);
+
+    });
+
+}
+
+function cancelarPedido(cancelar){
+  const cancelación = confirm('¿Esta seguro que deseas cancelar este pedido?');
+  if(cancelación){
+    guardarDatosComprados.carrito.splice(cancelar, 1);
+    localStorage.setItem('ComprasRealizadas', JSON.stringify(guardarDatosComprados));
+    pedidos.innerHTML = '';
+    location.reload();
+    alert('El pedido ha sido cancelado.')
+  }
+  else{
+    alert('El pedido NO ha sido cancelado.')
+  }
+}
 
 
 /* 
