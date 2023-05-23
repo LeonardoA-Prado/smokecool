@@ -68,12 +68,16 @@ function borrarDatosForm() {
   }
 }
 
-const usuarioGuardado = localStorage.getItem("nombre");
+const usuarioGuardado = localStorage.getItem("usuario");
 
 const pedidos = document.querySelector('.pedidos');
 
-
 let carritoJSON = localStorage.getItem("carrito");
+
+let datosCompradosGuardados = localStorage.getItem('datosComprados');
+
+let bolsa = [];
+
 
 let carrito = [];
 
@@ -81,6 +85,8 @@ if (carritoJSON) {
   carrito = JSON.parse(carritoJSON);
   
 }
+
+
 
 carrito.forEach((producto) => {
   const usuario = document.createElement('p');

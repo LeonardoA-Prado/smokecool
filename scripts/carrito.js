@@ -93,6 +93,9 @@ function updateSubtotalAndTotal() {
 }
 
 const usuario = document.getElementById('nombre');
-usuario.addEventListener("change", () => {
-  localStorage.setItem("nombre", usuario.value);
+const comprado = document.getElementById('comprado');
+comprado.addEventListener("click", () => {
+  
+  localStorage.setItem("datosComprados", JSON.stringify(usuario.value));
+  localStorage.setItem('datosComprados',JSON.stringify(carrito));
 });
