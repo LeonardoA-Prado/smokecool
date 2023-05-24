@@ -17,7 +17,6 @@ form.addEventListener('submit', (event) => {
   localStorage.setItem('formData', JSON.stringify(formArray));
 });
 
-
 const miBoton = document.querySelector('#boton');
 const miNotificacion = document.querySelector('#noti');
 const miTitulo = document.querySelector('#notigrax');

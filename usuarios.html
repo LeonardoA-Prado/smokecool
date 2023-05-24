@@ -9,41 +9,57 @@
     <link rel="icon" type="image/x-png" href="images/usuarios.png">
     <title>Configuracion Usuarios</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="carrito.css">
 </head>
 
 <body>
     <header>
-        <a href="index.html"><img onmouseout="this.src='images/logoblanco.png'" src="images/logoblanco.png" width="50px" height="50px" class="logo" href="index.html" onmouseover="this.src='images/logonaranja.png'" src="images/logonaranja.png" width="50px" height="50px" ></a>
+        <a href="index.html"><img onmouseout="this.src='images/logoblanco.png'" src="images/logoblanco.png" width="50px"
+                height="50px" class="logo" href="index.html" onmouseover="this.src='images/logonaranja.png'"
+                src="images/logonaranja.png" width="50px" height="50px"></a>
         <nav>
             <ul>
                 <li><a href="index.html" data-replace="Inicio"> <b>Inicio</b> </a></li>
-              <li><a href="catalogo.html" data-replace="Catálogo"> <b>Catálogo</b> </a></li>
-              <li><a href="contacto.html" data-replace="Contacto"> <b>Contacto</b> </a></li>
-              <li><a href="nosotros.html" data-replace="Nosotros"> <b>Nosotros</b> </a></li>
-              <li><a class="carritoLogoLink"   class="carritoFoto" href="carrito.html">
-                        <img class="carritoFoto" onmouseout="this.src='images/carrito.png'" src="images/carrito.png" onmouseover="this.src='images/carritonaranja.png'" src="images/carritonaranja.png">
+                <li><a href="catalogo.html" data-replace="Catálogo"> <b>Catálogo</b> </a></li>
+                <li><a href="contacto.html" data-replace="Contacto"> <b>Contacto</b> </a></li>
+                <li><a href="nosotros.html" data-replace="Nosotros"> <b>Nosotros</b> </a></li>
+                <li><a class="carritoLogoLink" class="carritoFoto" href="carrito.html">
+                        <img class="carritoFoto" onmouseout="this.src='images/carrito.png'" src="images/carrito.png"
+                            onmouseover="this.src='images/carritonaranja.png'" src="images/carritonaranja.png">
                     </a></li>
             </ul>
         </nav>
     </header>
 
-<h1 id="tituloUsuarios">Configuracion de Usuarios</h1>
+    <h1 id="tituloUsuarios">Configuracion de Usuarios</h1>
 
+    <h3 class="titulos">Pedidos Realizados</h3>
+    <div class="usuariosTabla">
+        <div class="divBoton">
+            <button id="eliminarCompras" class="eliminame">Eliminar todas las compras</button>
+        </div>
+        <table class="tablaUsuario">
+            <thead class="cabezera">
+                <td><b>Usuario</b></td>
+                <td><b>Id</b></td>
+                <td><b>Imagen</b></td>
+                <td><b>Producto</b></td>
+                <td><b>Precio</b></td>
+                <td><b>Cantidad</b></td>
+            </thead>
+            <tbody id="pedidos" class="pedidos"></tbody>
+        </table>
+    </div>
 
-<h3 class="titulos">Pedidos Realizados</h3>
-<div class="pedidos">
-    
-</div>
+    <div class="contenedorFormulario">
+        <h3 class="titulos">Mensajes de Usuarios</h3>
+        <button id="borrar">Borrar Mensajes</button>
+    </div>
 
-<div class="contenedorFormulario">
-    <h3 class="titulos">Mensajes de Usuarios</h3>
-    <button id="borrar">Borrar Mensajes</button>
-</div>
+    <div class="informacion">
 
-<div class="informacion">
+    </div>
 
-</div>
-
-<script src="scripts/usuarios.js"></script>
+    <script src="scripts/usuarios.js"></script>
 
 </body>

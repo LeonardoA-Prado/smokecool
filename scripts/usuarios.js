@@ -1,6 +1,6 @@
 const infoDiv = document.querySelector('.informacion');
 const savedData = JSON.parse(localStorage.getItem('formData'));
-const mensajesGuardados = savedData || [];
+const mensajesGuardados = savedData;
 
 renderizarMensajes();
 
@@ -68,87 +68,110 @@ function borrarDatosForm() {
   }
 }
 
-const usuarioGuardado = localStorage.getItem("usuario");
+const pedidos = document.getElementById('pedidos');
+const usuarioCarrito = JSON.parse(localStorage.getItem('datosComprasGuardado'));
 
-const pedidos = document.querySelector('.pedidos');
+const mostrarInformacionCarrito = () => {
+  usuarioCarrito.forEach((item) => {
+    console.log('Nombre del producto:', item.usuario);
+  });
+};
 
-let carritoJSON = localStorage.getItem("carrito");
+mostrarInformacionCarrito();
 
-let datosCompradosGuardados = JSON.parse(localStorage.getItem('ComprasRealizadas'));
-let guardarDatosComprados = datosCompradosGuardados || [];
+function renderizarPedidos() {
+  pedidos.innerHTML = '';
 
-/* let carrito = [];
-if (carritoJSON) {
-  carrito = JSON.parse(carritoJSON);
-  console.log("Hay cosas");
-}
- */
+  usuarioCarrito.forEach((pedido) => {
 
-/* let bolsa = [];
-if (datosCompradosGuardados) {
-  bolsa = datosCompradosGuardados;
-  console.log("Hay cosas aqui");
 
-} */
-renderizarPedidos();
-function renderizarPedidos(){
-  pedidos.className = 'pedidosStyle';
-    
+    const carrito = pedido.carrito;
 
-    guardarDatosComprados.carrito.forEach(function (producto, cancelar) {
-      var usuarioElemento = document.createElement('p');
-    
-    usuarioElemento.textContent = 'Usuario: ' + guardarDatosComprados.usuario;
-    pedidos.appendChild(usuarioElemento);
+    carrito.forEach((producto) => {
+
+      const trUsuarios = document.createElement('tr')
+
+      const usuarioElemento = document.createElement('p');
+      usuarioElemento.className = 'usuarioElemento'
+      usuarioElemento.style.background = 'none'
+      usuarioElemento.style.color = 'black'
+      usuarioElemento.style.fontWeight = 'bold'
+      const tdUsuario = document.createElement('td')
+      usuarioElemento.textContent = pedido.usuario;
+      tdUsuario.appendChild(usuarioElemento)
+      trUsuarios.appendChild(tdUsuario)
+      pedidos.appendChild(trUsuarios);
+
       const id = document.createElement('p');
-      id.textContent = `ID: ${producto.id}`;
-      pedidos.appendChild(id);
+      id.className = 'id'
+      id.style.background = 'none'
+      id.style.color = 'black'
+      id.style.fontWeight = 'bold'
+      const tdId = document.createElement('td')
+      id.textContent = producto.id;
+      tdId.appendChild(id)
+      trUsuarios.appendChild(tdId)
+      pedidos.appendChild(trUsuarios);
 
       const imagen = document.createElement('img');
+      imagen.className = 'imagenUsuario'
+      const tdimagen = document.createElement('td')
       imagen.src = producto.imagen;
       imagen.className = 'pedidoImagen';
-      pedidos.appendChild(imagen);
+      tdimagen.appendChild(imagen)
+      trUsuarios.appendChild(tdimagen)
+      pedidos.appendChild(trUsuarios);
 
       const nombreProducto = document.createElement('p');
-      nombreProducto.textContent = `Nombre del producto: ${producto.nombre}`;
-      pedidos.appendChild(nombreProducto);
+      nombreProducto.className = 'nombreProducto'
+      nombreProducto.style.background = 'none'
+      nombreProducto.style.color = 'black'
+      nombreProducto.style.fontWeight = 'bold'
+      const tdproducto = document.createElement('td')
+      nombreProducto.textContent = producto.nombre;
+      tdproducto.appendChild(nombreProducto)
+      trUsuarios.appendChild(tdproducto);
+      pedidos.appendChild(trUsuarios);
 
       const precio = document.createElement('p');
-      precio.textContent = `Precio: ${producto.precio}`;
-      pedidos.appendChild(precio);
+      precio.className = 'precioUsuario'
+      precio.style.background = 'none'
+      precio.style.color = 'black'
+      precio.style.fontWeight = 'bold'
+      const tdPrecio = document.createElement('td');
+      precio.textContent = producto.precio + '€';
+      tdPrecio.appendChild(precio);
+      trUsuarios.appendChild(tdPrecio)
+      pedidos.appendChild(trUsuarios);
 
       const cantidad = document.createElement('p');
-      cantidad.textContent = `Cantidad: ${producto.cantidad}`;
-      pedidos.appendChild(cantidad);
-
-      const divEliminar = document.createElement('div')
-      divEliminar.className = 'divBoton';
-      const cancelarBtn = document.createElement('button');
-      cancelarBtn.textContent = 'Cancelar';
-      cancelarBtn.className = 'borrarBtn';
-      cancelarBtn.addEventListener('click', () =>{
-        cancelarPedido(cancelar);
-      });
-      divEliminar.appendChild(cancelarBtn);   
-      pedidos.appendChild(divEliminar);
-
+      cantidad.className = 'cantidadUsuario'
+      cantidad.style.background = 'none'
+      cantidad.style.color = 'black'
+      cantidad.style.fontWeight = 'bold'
+      const tdCantidad = document.createElement('td')
+      cantidad.textContent = producto.cantidad;
+      tdCantidad.appendChild(cantidad)
+      trUsuarios.appendChild(tdCantidad)
+      pedidos.appendChild(trUsuarios);
     });
-
+  });
 }
+renderizarPedidos();
 
-function cancelarPedido(cancelar){
-  const cancelación = confirm('¿Esta seguro que deseas cancelar este pedido?');
-  if(cancelación){
-    guardarDatosComprados.carrito.splice(cancelar, 1);
-    localStorage.setItem('ComprasRealizadas', JSON.stringify(guardarDatosComprados));
+let eliminarCompras = document.getElementById('eliminarCompras');
+
+eliminarCompras.addEventListener('click', () => {
+  const confirmacion = confirm('¿Está seguro que desea eliminar todos los pedidos?');
+  if (confirmacion) {
+    localStorage.removeItem('datosComprasGuardado');
     pedidos.innerHTML = '';
-    location.reload();
-    alert('El pedido ha sido cancelado.')
+    alert('Todos los pedidos han sido eliminados.');
+  } else {
+    alert('La eliminación de pedidos ha sido cancelada.');
   }
-  else{
-    alert('El pedido NO ha sido cancelado.')
-  }
-}
+});
+
 
 
 /* 

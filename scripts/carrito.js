@@ -8,8 +8,8 @@ if (carritoJSON) {
   carrito.forEach((producto) => {
     let fila = document.createElement('tr')
     fila.innerHTML = `
-      <td class="cabeceras">${producto.nombre}</td>
-      <td><img class="imagenCarrito" src="${producto.imagen}"></td>
+      <td>${producto.nombre}</td>
+      <td class="cabeceras"><img class="imagenCarrito" src="${producto.imagen}"></td>
       <td>${producto.precio} €</td>
     `
 
@@ -26,15 +26,16 @@ if (carritoJSON) {
       producto.cantidad = nuevaCantidad;
       sessionStorage.setItem("carrito", JSON.stringify(carrito));
       updateSubtotalAndTotal();
-      
-      if(nuevaCantidad === 0){
+
+      if (nuevaCantidad === 0) {
         const index = carrito.findIndex(item => item.id === producto.id);
         if (index !== -1) {
-        carrito.splice(index, 1)
-        sessionStorage.setItem("carrito", JSON.stringify(carrito))
-        fila.remove()
+          carrito.splice(index, 1)
+          sessionStorage.setItem("carrito", JSON.stringify(carrito))
+          fila.remove()
+        }
       }
-    }});
+    });
 
     cantidadCelda.append(cantidad)
     fila.append(cantidadCelda)
@@ -94,17 +95,27 @@ function updateSubtotalAndTotal() {
 
 const usuario = document.getElementById('nombre');
 const comprado = document.getElementById('comprado');
-comprado.addEventListener("click", function() {
-  const usuarioSaved = usuario.value;
-  
-  const carritoGuardado = localStorage.getItem('carrito');
 
-  const datosComprasGuardado = {
+const usuarioGuardado = localStorage.getItem('usuario');
+usuario.value = usuarioGuardado;
+
+comprado.addEventListener('click', () => {
+
+  const usuarioSaved = usuario.value;
+
+  const datosComprasGuardadoJSON = localStorage.getItem('datosComprasGuardado');
+  let datosComprasGuardado = [];
+
+  if (datosComprasGuardadoJSON) {
+    datosComprasGuardado = JSON.parse(datosComprasGuardadoJSON);
+  }
+
+  const nuevaCompra = {
     usuario: usuarioSaved,
     carrito: carrito
   };
 
-  localStorage.setItem('ComprasRealizadas', JSON.stringify(datosComprasGuardado));
-  
-  
+  datosComprasGuardado.push(nuevaCompra);
+
+  localStorage.setItem('datosComprasGuardado', JSON.stringify(datosComprasGuardado));
 });
