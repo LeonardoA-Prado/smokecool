@@ -71,14 +71,6 @@ function borrarDatosForm() {
 const pedidos = document.getElementById('pedidos');
 const usuarioCarrito = JSON.parse(localStorage.getItem('datosComprasGuardado'));
 
-const mostrarInformacionCarrito = () => {
-  usuarioCarrito.forEach((item) => {
-    console.log('Nombre del producto:', item.usuario);
-  });
-};
-
-mostrarInformacionCarrito();
-
 function renderizarPedidos() {
 
   usuarioCarrito.forEach((pedido) => {
@@ -170,40 +162,6 @@ eliminarCompras.addEventListener('click', () => {
     alert('La eliminación de pedidos ha sido cancelada.');
   }
 });
-
-
-
-/* 
-carrito.forEach((producto) => {
-  const usuario = document.createElement('p');
-  usuario.textContent = usuarioGuardado;
-  pedidos.appendChild(usuario);
-
-  const imagen = document.createElement('img');
-  imagen.classList.add('fotoProductos')
-  imagen.src = producto.imagen;
-  pedidos.appendChild(imagen);
-
-  const id = document.createElement('p');
-  id.textContent = `ID: ${producto.id}`;
-  pedidos.appendChild(id);
-
-  const nombreProducto = document.createElement('p');
-  nombreProducto.textContent = `Nombre del producto: ${producto.nombre}`;
-  pedidos.appendChild(nombreProducto);
-
-  const precio = document.createElement('p');
-  precio.textContent = `Precio: ${producto.precio}`;
-  pedidos.appendChild(precio);
-
-  const cantidad = document.createElement('p');
-  cantidad.textContent = `Cantidad: ${producto.cantidad}`;
-  pedidos.appendChild(cantidad);
-}); */
-
-
-
-
 
 
 
