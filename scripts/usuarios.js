@@ -80,7 +80,6 @@ const mostrarInformacionCarrito = () => {
 mostrarInformacionCarrito();
 
 function renderizarPedidos() {
-  pedidos.innerHTML = '';
 
   usuarioCarrito.forEach((pedido) => {
 
