@@ -8,6 +8,10 @@ let formArray = JSON.parse(localStorage.getItem('formData')) || [];
 form.addEventListener('submit', (event) => {
   event.preventDefault();
 
+  if (emailInput.value === "" || subjectInput.value === "" || messageInput.value === "") {
+    miTitulo.textContent = "El formato de entrada está mal";
+    miTexto.textContent = "Por favor, introduce el formato correcto";
+  }else{
   const formData = {
     email: emailInput.value,
     subject: subjectInput.value,
@@ -15,6 +19,7 @@ form.addEventListener('submit', (event) => {
   };
   formArray.push(formData);
   localStorage.setItem('formData', JSON.stringify(formArray));
+}
 });
 
 const miBoton = document.querySelector('#boton');
